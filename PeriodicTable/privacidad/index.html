@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es" data-title-es="Política de privacidad · Tabla Periódica" data-title-en="Privacy Policy · Periodic Table">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Tabla Periódica</title>
+<meta name="description" content="Qué datos guarda Tabla Periódica y dónde: todo se queda en tu dispositivo. What Periodic Table stores and where: everything stays on your device.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f4;
+  --card: #ffffff;
+  --ink: #1c1c21;
+  --title: #0f0f12;
+  --muted: #55555b;
+  --line: #dcdce2;
+  --accent: #14565b;
+  --on-accent: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181c;
+    --card: #23242a;
+    --ink: #ececf0;
+    --title: #f7f7f9;
+    --muted: #a8a8ae;
+    --line: #34353c;
+    --accent: #45b3bd;
+    --on-accent: #0f0f12;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 20px 16px 64px; }
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 1; background: var(--card); padding: 8px 12px; border-radius: 8px; }
+.site {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  color: var(--title); font-weight: 600; text-decoration: none;
+}
+.brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
+.langs {
+  display: inline-flex; gap: 2px; padding: 3px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+}
+.langs a {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+  border-radius: 999px; color: var(--ink); text-decoration: none; font-size: .95rem;
+}
+.langs a[aria-current] { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+h1, h2, h3 { color: var(--title); line-height: 1.25; }
+h1 { font-size: 2rem; margin: .4em 0 .2em; letter-spacing: -.01em; }
+h2 { font-size: 1.3rem; margin: 2em 0 .5em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 .35em; }
+h1:focus { outline: none; }
+.meta { color: var(--muted); font-size: .95rem; margin-top: 0; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 2px 20px 10px; margin: 20px 0;
+}
+.card h2 { margin-top: .9em; }
+ul { padding-left: 1.25em; }
+li { margin: .4em 0; }
+strong { color: var(--title); }
+.path { font-weight: 600; color: var(--title); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a[href^="mailto:"] { overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+section + section { margin-top: 56px; padding-top: 8px; border-top: 1px solid var(--line); }
+html[data-lang="es"] #en, html[data-lang="en"] #es { display: none; }
+html[data-lang] section + section { margin-top: 0; padding-top: 0; border-top: 0; }
+.big { display: grid; gap: 12px; margin: 16px 0 8px; padding: 0; list-style: none; }
+.big a {
+  display: block; min-height: 44px; padding: 14px 18px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  font-weight: 600; text-decoration: none;
+}
+.big span { display: block; color: var(--muted); font-weight: 400; font-size: .95rem; }
+footer {
+  margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .9rem;
+}
+footer p { margin: .3em 0; }
+@media print {
+  .skip, .langs { display: none; }
+  html[data-lang] #es, html[data-lang] #en { display: block; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido · Skip to content</a>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="../"><img src="../icon.png" alt="">Tabla Periódica · Periodic Table</a>
+<nav class="langs" aria-label="Idioma · Language"><a href="#es" hreflang="es" lang="es" data-set-lang="es">Español</a><a href="#en" hreflang="en" lang="en" data-set-lang="en">English</a></nav>
+</header>
+<main id="main">
+<section id="es" lang="es" aria-labelledby="es-title">
+<h1 id="es-title" tabindex="-1">Política de privacidad</h1>
+<p class="meta">Tabla Periódica para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch, con sus widgets. Última actualización: <time datetime="2026-09-22">22 de septiembre de 2026</time>.</p>
+
+<div class="card">
+<h2 id="es-resumen">En pocas palabras</h2>
+<ul>
+<li>La app <strong>no recoge datos personales ni los envía a nadie</strong>, tampoco a nosotros. Lo que guardas en ella (favoritos, notas, historial, progreso) se queda en tu dispositivo.</li>
+<li>No hay cuentas, ni anuncios, ni analítica, ni rastreo.</li>
+<li>Las compras las cobra y gestiona Apple: no vemos tu nombre, tu cuenta ni tu tarjeta.</li>
+<li>Solo recibimos datos tuyos si nos escribes un correo, y solo los usamos para responderte.</li>
+</ul>
+</div>
+
+<h2 id="es-responsable">Quién es el responsable</h2>
+<p>Tabla Periódica la desarrolla y publica Josue Manuel Echandia Asto, desarrollador independiente («nosotros» en esta política). Para cualquier cuestión de privacidad, escríbenos a <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a>.</p>
+
+<h2 id="es-datos">Qué guarda la app y dónde</h2>
+<p>Para funcionar, la app guarda en tu dispositivo, en su propio espacio de almacenamiento:</p>
+<ul>
+<li><strong>Favoritos y notas</strong> que añades a los elementos.</li>
+<li><strong>Elementos vistos hace poco</strong>, para la sección Recientes.</li>
+<li><strong>Historial de cálculos</strong>: las fórmulas, ecuaciones y cifras que confirmas en las calculadoras (masa molar, ecuaciones, disoluciones y estadística), con su fecha.</li>
+<li><strong>Progreso de los cuestionarios</strong>: intentos, aciertos por tema, la cola de repaso, las mejores marcas y los días en que estudiaste.</li>
+<li><strong>Preferencias</strong>: tema, unidades, orden de las listas, vibración en los cuestionarios y otros ajustes parecidos.</li>
+<li><strong>Si compraste Pro de por vida</strong>, una marca que lo recuerda para que funcione sin conexión.</li>
+</ul>
+<p>La app también crea en el dispositivo una base de datos con la información de los elementos que ya trae incluida; no contiene nada tuyo.</p>
+<p>Nada de esto se envía a ningún servidor ni se sincroniza con iCloud: <strong>nosotros no podemos verlo</strong>. Solo está en el dispositivo en el que lo creaste.</p>
+<ul>
+<li><strong>Widgets.</strong> La app deja una copia de tus favoritos, el tema y las unidades de temperatura y energía en un espacio que comparte con sus widgets en el mismo dispositivo (un App Group), para que puedan mostrarlos.</li>
+<li><strong>Apple Watch.</strong> La app del reloj guarda en el propio reloj sus favoritos, la unidad de temperatura y cómo agrupas la lista. No se sincroniza con el iPhone.</li>
+<li><strong>Copias de seguridad.</strong> Como los de cualquier app, estos datos pueden ir en la copia de seguridad de tu dispositivo (en iCloud o en tu ordenador) si la tienes activada. Esa copia la gestiona Apple según tu configuración y nosotros no tenemos acceso a ella.</li>
+</ul>
+
+<h2 id="es-no">Lo que la app no hace</h2>
+<ul>
+<li>No tiene cuentas ni registro, y no se conecta a servidores nuestros ni de terceros.</li>
+<li>No incluye herramientas de analítica, publicidad, rastreo ni informes de errores de terceros, y no te sigue por apps o webs de otras empresas. Por eso no te pide permiso de rastreo.</li>
+<li>No accede a tu ubicación, tus contactos, tus fotos, la cámara, el micrófono ni tus datos de salud.</li>
+<li>La única biblioteca de terceros que incluye es Realm, una base de datos de código abierto que la app usa solo en el dispositivo, sin sincronización.</li>
+</ul>
+<p>Si en tu dispositivo aceptaste compartir análisis con los desarrolladores (<span class="path">Ajustes › Privacidad y seguridad › Análisis y mejoras</span>), Apple puede facilitarnos informes de fallos y estadísticas de uso agregadas, que no te identifican. Es una función de Apple y la puedes desactivar ahí mismo.</p>
+
+<h2 id="es-spotlight">Búsqueda del sistema y Siri</h2>
+<p><strong>Spotlight.</strong> Para que encuentres el contenido de la app desde la búsqueda del dispositivo, la app añade a su índice los elementos, las tablas, las herramientas, los términos del glosario y las reacciones. Es el contenido de la app, el mismo para todo el mundo: tus favoritos, notas, historial y progreso no se indexan. El índice está en tu dispositivo.</p>
+<p><strong>Siri y Atajos.</strong> Puedes pedir la masa molar de una fórmula o abrir un elemento o una herramienta. La app recibe solo esa fórmula, ese elemento o esa herramienta, hace el cálculo en el dispositivo y no lo guarda. Lo que le dices a Siri lo trata Apple según su propia política de privacidad.</p>
+
+<h2 id="es-compras">Compras (Pro)</h2>
+<p>Pro se ofrece como pago único de por vida o como suscripción mensual o anual de renovación automática. Todas las compras se hacen con tu cuenta de Apple en el App Store, que cobra, factura y gestiona los reembolsos. <strong>No recibimos tu nombre, tu correo, tu cuenta de Apple ni tus datos de pago.</strong></p>
+<p>Para saber si tienes Pro, la app lo consulta a StoreKit, el sistema de compras de Apple, en tu propio dispositivo. Apple nos da informes de ventas agregados que no dicen quién eres.</p>
+<p>Las suscripciones se gestionan y se cancelan en los ajustes de tu cuenta de Apple, o desde la app en <span class="path">Más › Gestionar suscripción</span>. Lo que hace Apple con tus datos se rige por su <a href="https://www.apple.com/legal/privacy/">política de privacidad</a>.</p>
+
+<h2 id="es-enlaces">Fotos y enlaces externos</h2>
+<p>Las fotografías de los elementos van dentro de la app: verlas no conecta con ningún sitio. Si tocas el crédito de una foto o su licencia, se abre en tu navegador la página original en Wikimedia Commons o la de la licencia Creative Commons. La app no les envía ningún dato tuyo; a partir de ahí se aplica la política de privacidad de esas webs, como en cualquier página que visites.</p>
+<p>Lo mismo ocurre con los demás enlaces de la app: las condiciones de uso, que están en la web de Apple, y esta política, que está alojada en GitHub Pages. GitHub puede registrar la dirección IP de quien visita la página por motivos de seguridad, según su declaración de privacidad.</p>
+
+<h2 id="es-correo">Si nos escribes</h2>
+<p>En <span class="path">Más › Soporte › Envía un comentario o error</span>, la app abre el correo de tu dispositivo con nuestra dirección y una línea con la versión de la app, el modelo del dispositivo y la versión del sistema, que nos ayuda a reproducir los errores. Lo ves todo antes de enviarlo y puedes cambiarlo o borrarlo. El mensaje sale de tu propia cuenta de correo; la app no envía nada por su cuenta.</p>
+<p>Si nos escribes, desde la app o directamente, recibimos:</p>
+<ul>
+<li>tu dirección de correo y el nombre de tu cuenta de correo;</li>
+<li>lo que escribas y lo que adjuntes;</li>
+<li>la línea técnica, si no la borraste.</li>
+</ul>
+<p><strong>Para qué:</strong> solo para responderte y para corregir o mejorar la app. No lo usamos para publicidad, no te suscribimos a nada y no lo vendemos ni lo cedemos a nadie.</p>
+<p><strong>Dónde:</strong> en nuestro buzón de Gmail, así que lo almacena Google como proveedor de correo, que puede guardarlo en servidores fuera de tu país.</p>
+<p><strong>Cuánto tiempo:</strong> el necesario para atender tu consulta; después lo borramos. Puedes pedirnos que lo borremos antes en cualquier momento.</p>
+<p><strong>Base jurídica (RGPD):</strong> nuestro interés legítimo en responder a quien nos escribe y en mejorar la app (art. 6.1.f) y, si la consulta es sobre una compra, la prestación del servicio que contrataste (art. 6.1.b). No necesitamos datos sensibles; por favor, no nos los envíes.</p>
+
+<h2 id="es-borrar">Cómo borrar tus datos</h2>
+<ul>
+<li><strong>Recientes, historial de cálculos y progreso de los cuestionarios:</strong> en <span class="path">Más › Ajustes</span>, con Borrar recientes, Borrar historial de cálculos y Borrar progreso de cuestionarios.</li>
+<li><strong>Favoritos:</strong> toca la estrella en la ficha del elemento. <strong>Notas:</strong> borra el texto de la nota en la ficha.</li>
+<li><strong>Todo a la vez:</strong> desinstala la app (mantén pulsado su icono y elige Eliminar app) en cada dispositivo donde la uses. Con ella se borran los datos del widget y lo que añadió a Spotlight. En el Apple Watch, elimina también la app del reloj si sigue instalada.</li>
+<li>Tus compras no se pierden: están en tu cuenta de Apple. Si vuelves a instalar la app, usa Restaurar compras.</li>
+</ul>
+
+<h2 id="es-derechos">Tus derechos</h2>
+<p>Como la app no nos envía nada, los datos que guarda no los tenemos: los controlas tú en tu dispositivo, como se explica arriba. Los únicos datos tuyos que podemos tener son los de los correos que nos envíes. Sobre ellos puedes ejercer tus derechos, sin coste, escribiendo a <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a> desde la dirección con la que nos escribiste (o indicándonos cuál fue).</p>
+<h3 id="es-rgpd">España y el resto de la Unión Europea (RGPD)</h3>
+<p>Tienes derecho de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición. No tomamos decisiones automatizadas sobre ti. Te respondemos en el plazo de un mes. Si crees que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">aepd.es</a>) o ante la autoridad de protección de datos de tu país.</p>
+<h3 id="es-mexico">México (LFPDPPP)</h3>
+<p>Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, tienes los derechos de acceso, rectificación, cancelación y oposición (derechos ARCO), y puedes revocar tu consentimiento o limitar el uso de tus datos. Envíanos tu solicitud por correo con tu nombre, el derecho que quieres ejercer y, si hace falta, qué quieres corregir. Te comunicaremos la respuesta en un plazo máximo de 20 días y, si procede, la haremos efectiva en los 15 días siguientes.</p>
+<p>Tratamos esos datos (tu correo, tu nombre y lo que nos cuentes; ninguno sensible) solo para atender tu consulta: no hay finalidades secundarias. No los transferimos a terceros; solo los almacena Google como proveedor del correo. Al escribirnos consientes ese uso. La autoridad competente es la Secretaría Anticorrupción y Buen Gobierno.</p>
+<h3 id="es-otros">Otros países</h3>
+<p>Si vives en otro lugar, escríbenos igualmente: atenderemos los derechos que te reconozca tu ley.</p>
+
+<h2 id="es-menores">Menores</h2>
+<p>La app no recoge datos de nadie, así que la pueden usar estudiantes de cualquier edad. Si eres menor y quieres escribirnos, hazlo con ayuda de tu madre, tu padre o tu tutor.</p>
+
+<h2 id="es-cambios">Cambios en esta política</h2>
+<p>Si cambia lo que la app hace con los datos, actualizaremos esta página y su fecha. Si alguna vez la app fuera a recoger datos, lo diríamos aquí y en la propia app antes de hacerlo.</p>
+
+<footer>
+<p>Josue Manuel Echandia Asto · <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a></p>
+<p><a href="../soporte/#es">Soporte</a> · <a href="../">Inicio</a></p>
+</footer>
+</section>
+
+<section id="en" lang="en" aria-labelledby="en-title">
+<h1 id="en-title" tabindex="-1">Privacy Policy</h1>
+<p class="meta">Periodic Table (Tabla Periódica) for iPhone, iPad, Mac, Apple Vision Pro and Apple Watch, including its widgets. Last updated: <time datetime="2026-09-22">September 22, 2026</time>.</p>
+
+<div class="card">
+<h2 id="en-summary">In short</h2>
+<ul>
+<li>The app <strong>does not collect personal data or send it to anyone</strong>, including us. What you save in it (favorites, notes, history, progress) stays on your device.</li>
+<li>No accounts, no ads, no analytics, no tracking.</li>
+<li>Purchases are charged and managed by Apple: we never see your name, your account or your card.</li>
+<li>We only receive data about you if you email us, and we only use it to reply.</li>
+</ul>
+</div>
+
+<h2 id="en-controller">Who is responsible</h2>
+<p>Periodic Table is developed and published by Josue Manuel Echandia Asto, an independent developer (“we” in this policy). For any privacy question, email <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a>.</p>
+
+<h2 id="en-data">What the app stores, and where</h2>
+<p>To work, the app stores the following on your device, in its own storage space:</p>
+<ul>
+<li><strong>Favorites and notes</strong> you add to elements.</li>
+<li><strong>Recently viewed elements</strong>, for the Recents section.</li>
+<li><strong>Calculation history</strong>: the formulas, equations and numbers you confirm in the calculators (molar mass, equations, solutions and statistics), with their date.</li>
+<li><strong>Quiz progress</strong>: attempts, results by topic, the review queue, best scores and the days you studied.</li>
+<li><strong>Preferences</strong>: theme, units, list order, quiz haptics and similar settings.</li>
+<li><strong>If you bought lifetime Pro</strong>, a flag that remembers it so it works offline.</li>
+</ul>
+<p>The app also builds, on the device, a database from the element information it already ships with; it contains nothing about you.</p>
+<p>None of this is sent to any server or synced with iCloud: <strong>we cannot see it</strong>. It only exists on the device where you created it.</p>
+<ul>
+<li><strong>Widgets.</strong> The app keeps a copy of your favorites, theme, and temperature and energy units in a space it shares with its widgets on the same device (an App Group), so they can display them.</li>
+<li><strong>Apple Watch.</strong> The watch app stores its own favorites, temperature unit and list grouping on the watch. It does not sync with the iPhone.</li>
+<li><strong>Backups.</strong> Like any app’s data, this data may be included in your device backup (in iCloud or on your computer) if you have backups turned on. Apple manages that backup according to your settings, and we have no access to it.</li>
+</ul>
+
+<h2 id="en-not">What the app does not do</h2>
+<ul>
+<li>It has no accounts or sign-up, and it does not connect to our servers or anyone else’s.</li>
+<li>It contains no third-party analytics, advertising, tracking or crash-reporting tools, and it does not follow you across other companies’ apps or websites. That is why it never asks for tracking permission.</li>
+<li>It does not access your location, contacts, photos, camera, microphone or health data.</li>
+<li>The only third-party library it includes is Realm, an open-source database the app uses on the device only, without sync.</li>
+</ul>
+<p>If you chose to share analytics with app developers on your device (<span class="path">Settings › Privacy &amp; Security › Analytics &amp; Improvements</span>), Apple may give us crash reports and aggregated usage statistics that do not identify you. This is an Apple feature, and you can turn it off there.</p>
+
+<h2 id="en-spotlight">System search and Siri</h2>
+<p><strong>Spotlight.</strong> So you can find the app’s content from your device’s search, the app adds its elements, tables, tools, glossary terms and reactions to the search index. That is the app’s own content, the same for everyone: your favorites, notes, history and progress are not indexed. The index lives on your device.</p>
+<p><strong>Siri and Shortcuts.</strong> You can ask for the molar mass of a formula, or open an element or a tool. The app only receives that formula, element or tool, does the calculation on the device and does not store it. What you say to Siri is handled by Apple under its own privacy policy.</p>
+
+<h2 id="en-purchases">Purchases (Pro)</h2>
+<p>Pro is offered as a one-time lifetime purchase or as an auto-renewable monthly or yearly subscription. All purchases are made with your Apple Account through the App Store, which charges, invoices and handles refunds. <strong>We do not receive your name, email, Apple Account or payment details.</strong></p>
+<p>To know whether you have Pro, the app asks StoreKit, Apple’s purchase system, on your own device. Apple gives us aggregated sales reports that do not say who you are.</p>
+<p>Subscriptions are managed and cancelled in your Apple Account settings, or in the app under <span class="path">More › Manage subscription</span>. What Apple does with your data is governed by its <a href="https://www.apple.com/legal/privacy/">privacy policy</a>.</p>
+
+<h2 id="en-links">Photos and external links</h2>
+<p>Element photographs are bundled inside the app: viewing them connects to nothing. If you tap a photo credit or its license, your browser opens the original page on Wikimedia Commons or the Creative Commons license page. The app sends them no data about you; from then on, those websites’ privacy policies apply, as with any page you visit.</p>
+<p>The same goes for the app’s other links: the Terms of Use, on Apple’s website, and this policy, which is hosted on GitHub Pages. GitHub may log the IP address of visitors for security purposes, as described in its privacy statement.</p>
+
+<h2 id="en-email">If you email us</h2>
+<p>Under <span class="path">More › Support › Send a comment or bug</span>, the app opens your device’s mail composer with our address and a line with the app version, device model and system version, which helps us reproduce bugs. You see everything before sending and can change or delete it. The message is sent from your own email account; the app sends nothing on its own.</p>
+<p>If you email us, from the app or directly, we receive:</p>
+<ul>
+<li>your email address and your mail account name;</li>
+<li>what you write and anything you attach;</li>
+<li>the technical line, if you did not delete it.</li>
+</ul>
+<p><strong>Why:</strong> only to reply to you and to fix or improve the app. We never use it for marketing, never subscribe you to anything, and never sell or share it.</p>
+<p><strong>Where:</strong> in our Gmail inbox, so it is stored by Google as our email provider, possibly on servers outside your country.</p>
+<p><strong>How long:</strong> as long as needed to handle your request; then we delete it. You can ask us to delete it sooner at any time.</p>
+<p><strong>Legal basis (GDPR):</strong> our legitimate interest in replying to people who write to us and in improving the app (Art. 6(1)(f)) and, if your question is about a purchase, providing the service you paid for (Art. 6(1)(b)). We do not need sensitive data; please do not send it.</p>
+
+<h2 id="en-delete">How to delete your data</h2>
+<ul>
+<li><strong>Recents, calculation history and quiz progress:</strong> in <span class="path">More › Settings</span>, with Clear recents, Clear calculation history and Clear quiz progress.</li>
+<li><strong>Favorites:</strong> tap the star on the element’s page. <strong>Notes:</strong> delete the note’s text on the element’s page.</li>
+<li><strong>Everything at once:</strong> uninstall the app (touch and hold its icon, then Remove App) on every device where you use it. This also removes the widget data and what it added to Spotlight. On Apple Watch, also remove the watch app if it is still installed.</li>
+<li>Your purchases are not lost: they belong to your Apple Account. If you reinstall the app, use Restore purchases.</li>
+</ul>
+
+<h2 id="en-rights">Your rights</h2>
+<p>Because the app sends us nothing, we do not have the data it stores: you control it on your device, as explained above. The only data about you we may have is in the emails you send us. You can exercise your rights over it, free of charge, by writing to <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a> from the address you used (or telling us which one it was).</p>
+<h3 id="en-gdpr">Spain and the rest of the European Union (GDPR)</h3>
+<p>You have the right of access, rectification, erasure, restriction of processing, portability and objection. We make no automated decisions about you. We reply within one month. If you think we did not handle your request properly, you can lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es">aepd.es</a>) or with the data protection authority of your country.</p>
+<h3 id="en-mexico">Mexico (LFPDPPP)</h3>
+<p>Under the Federal Law on the Protection of Personal Data Held by Private Parties, you have the rights of access, rectification, cancellation and objection (ARCO rights), and you can revoke your consent or limit the use of your data. Email us your request with your name, the right you want to exercise and, if needed, what you want corrected. We will tell you our decision within 20 days at most and, where applicable, carry it out within the following 15 days.</p>
+<p>We process that data (your email, your name and what you tell us; nothing sensitive) only to handle your request: there are no secondary purposes. We do not transfer it to third parties; it is only stored by Google as our email provider. By writing to us you consent to that use. The competent authority is the Secretaría Anticorrupción y Buen Gobierno.</p>
+<h3 id="en-other">Other countries</h3>
+<p>If you live elsewhere, write to us anyway: we will honor the rights your law gives you.</p>
+
+<h2 id="en-children">Children</h2>
+<p>The app collects no data from anyone, so students of any age can use it. If you are a minor and want to email us, please do so with help from a parent or guardian.</p>
+
+<h2 id="en-changes">Changes to this policy</h2>
+<p>If what the app does with data changes, we will update this page and its date. If the app were ever to collect data, we would say so here and in the app before it happens.</p>
+
+<footer>
+<p>Josue Manuel Echandia Asto · <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a></p>
+<p><a href="../soporte/#en">Support</a> · <a href="../">Home</a></p>
+</footer>
+</section>
+</main>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var links = document.querySelectorAll('[data-set-lang]');
+  var titles = { es: root.getAttribute('data-title-es'), en: root.getAttribute('data-title-en') };
+  function choose(lang, focus) {
+    root.setAttribute('data-lang', lang);
+    root.lang = lang;
+    if (titles[lang]) document.title = titles[lang];
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].getAttribute('data-set-lang') === lang) links[i].setAttribute('aria-current', 'true');
+      else links[i].removeAttribute('aria-current');
+    }
+    if (focus) {
+      var h = document.getElementById(lang + '-title');
+      if (h) h.focus({ preventScroll: true });
+    }
+  }
+  function fromHash() {
+    var lang = decodeURIComponent(location.hash.slice(1)).split('-')[0];
+    return lang === 'es' || lang === 'en' ? lang : null;
+  }
+  function preferred() {
+    var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+    return String(list[0]).toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+  }
+  choose(fromHash() || preferred(), false);
+  var id = decodeURIComponent(location.hash.slice(1));
+  var target = id.indexOf('-') > 0 ? document.getElementById(id) : null;
+  if (target) target.scrollIntoView();
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      var lang = this.getAttribute('data-set-lang');
+      if (history.replaceState) history.replaceState(null, '', '#' + lang);
+      choose(lang, true);
+      window.scrollTo(0, 0);
+    });
+  }
+  window.addEventListener('hashchange', function () {
+    var lang = fromHash();
+    if (lang) choose(lang, false);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabla Periódica · Periodic Table</title>
+<meta name="description" content="Tabla Periódica: política de privacidad y soporte. Periodic Table: privacy policy and support.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f4;
+  --card: #ffffff;
+  --ink: #1c1c21;
+  --title: #0f0f12;
+  --muted: #55555b;
+  --line: #dcdce2;
+  --accent: #14565b;
+  --on-accent: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181c;
+    --card: #23242a;
+    --ink: #ececf0;
+    --title: #f7f7f9;
+    --muted: #a8a8ae;
+    --line: #34353c;
+    --accent: #45b3bd;
+    --on-accent: #0f0f12;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 20px 16px 64px; }
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 1; background: var(--card); padding: 8px 12px; border-radius: 8px; }
+.site {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  color: var(--title); font-weight: 600; text-decoration: none;
+}
+.brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
+.langs {
+  display: inline-flex; gap: 2px; padding: 3px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+}
+.langs a {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+  border-radius: 999px; color: var(--ink); text-decoration: none; font-size: .95rem;
+}
+.langs a[aria-current] { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+h1, h2, h3 { color: var(--title); line-height: 1.25; }
+h1 { font-size: 2rem; margin: .4em 0 .2em; letter-spacing: -.01em; }
+h2 { font-size: 1.3rem; margin: 2em 0 .5em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 .35em; }
+h1:focus { outline: none; }
+.meta { color: var(--muted); font-size: .95rem; margin-top: 0; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 2px 20px 10px; margin: 20px 0;
+}
+.card h2 { margin-top: .9em; }
+ul { padding-left: 1.25em; }
+li { margin: .4em 0; }
+strong { color: var(--title); }
+.path { font-weight: 600; color: var(--title); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a[href^="mailto:"] { overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+section + section { margin-top: 56px; padding-top: 8px; border-top: 1px solid var(--line); }
+html[data-lang="es"] #en, html[data-lang="en"] #es { display: none; }
+html[data-lang] section + section { margin-top: 0; padding-top: 0; border-top: 0; }
+.big { display: grid; gap: 12px; margin: 16px 0 8px; padding: 0; list-style: none; }
+.big a {
+  display: block; min-height: 44px; padding: 14px 18px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  font-weight: 600; text-decoration: none;
+}
+.big span { display: block; color: var(--muted); font-weight: 400; font-size: .95rem; }
+footer {
+  margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .9rem;
+}
+footer p { margin: .3em 0; }
+@media print {
+  .skip, .langs { display: none; }
+  html[data-lang] #es, html[data-lang] #en { display: block; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido · Skip to content</a>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="./"><img src="icon.png" alt="">Tabla Periódica · Periodic Table</a>
+
+</header>
+<main id="main">
+<section lang="es" aria-labelledby="es-title">
+<h1 id="es-title">Tabla Periódica</h1>
+<p class="meta">La referencia química completa que cabe en el bolsillo, para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch.</p>
+<ul class="big">
+<li><a href="privacidad/#es">Política de privacidad<span>Lo que guardas se queda en tu dispositivo.</span></a></li>
+<li><a href="soporte/#es">Soporte<span>Contacto y preguntas frecuentes.</span></a></li>
+</ul>
+</section>
+<section lang="en" aria-labelledby="en-title">
+<h2 id="en-title">Periodic Table</h2>
+<p class="meta">The complete chemistry reference that fits in your pocket, for iPhone, iPad, Mac, Apple Vision Pro and Apple Watch.</p>
+<ul class="big">
+<li><a href="privacidad/#en">Privacy Policy<span>What you save stays on your device.</span></a></li>
+<li><a href="soporte/#en">Support<span>Contact and frequently asked questions.</span></a></li>
+</ul>
+</section>
+</main>
+</div>
+</body>
+</html>

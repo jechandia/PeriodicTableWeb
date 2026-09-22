@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es" data-title-es="Soporte · Tabla Periódica" data-title-en="Support · Periodic Table">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soporte · Tabla Periódica</title>
+<meta name="description" content="Ayuda y preguntas frecuentes de Tabla Periódica. Help and FAQ for Periodic Table.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="../icon.png">
+<link rel="apple-touch-icon" href="../icon.png">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f4;
+  --card: #ffffff;
+  --ink: #1c1c21;
+  --title: #0f0f12;
+  --muted: #55555b;
+  --line: #dcdce2;
+  --accent: #14565b;
+  --on-accent: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17181c;
+    --card: #23242a;
+    --ink: #ececf0;
+    --title: #f7f7f9;
+    --muted: #a8a8ae;
+    --line: #34353c;
+    --accent: #45b3bd;
+    --on-accent: #0f0f12;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 20px 16px 64px; }
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 1; background: var(--card); padding: 8px 12px; border-radius: 8px; }
+.site {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  color: var(--title); font-weight: 600; text-decoration: none;
+}
+.brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
+.langs {
+  display: inline-flex; gap: 2px; padding: 3px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+}
+.langs a {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+  border-radius: 999px; color: var(--ink); text-decoration: none; font-size: .95rem;
+}
+.langs a[aria-current] { background: var(--accent); color: var(--on-accent); font-weight: 600; }
+h1, h2, h3 { color: var(--title); line-height: 1.25; }
+h1 { font-size: 2rem; margin: .4em 0 .2em; letter-spacing: -.01em; }
+h2 { font-size: 1.3rem; margin: 2em 0 .5em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 .35em; }
+h1:focus { outline: none; }
+.meta { color: var(--muted); font-size: .95rem; margin-top: 0; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 2px 20px 10px; margin: 20px 0;
+}
+.card h2 { margin-top: .9em; }
+ul { padding-left: 1.25em; }
+li { margin: .4em 0; }
+strong { color: var(--title); }
+.path { font-weight: 600; color: var(--title); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a[href^="mailto:"] { overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+section + section { margin-top: 56px; padding-top: 8px; border-top: 1px solid var(--line); }
+html[data-lang="es"] #en, html[data-lang="en"] #es { display: none; }
+html[data-lang] section + section { margin-top: 0; padding-top: 0; border-top: 0; }
+.big { display: grid; gap: 12px; margin: 16px 0 8px; padding: 0; list-style: none; }
+.big a {
+  display: block; min-height: 44px; padding: 14px 18px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  font-weight: 600; text-decoration: none;
+}
+.big span { display: block; color: var(--muted); font-weight: 400; font-size: .95rem; }
+footer {
+  margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .9rem;
+}
+footer p { margin: .3em 0; }
+@media print {
+  .skip, .langs { display: none; }
+  html[data-lang] #es, html[data-lang] #en { display: block; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido · Skip to content</a>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="../"><img src="../icon.png" alt="">Tabla Periódica · Periodic Table</a>
+<nav class="langs" aria-label="Idioma · Language"><a href="#es" hreflang="es" lang="es" data-set-lang="es">Español</a><a href="#en" hreflang="en" lang="en" data-set-lang="en">English</a></nav>
+</header>
+<main id="main">
+<section id="es" lang="es" aria-labelledby="es-title">
+<h1 id="es-title" tabindex="-1">Soporte</h1>
+<p class="meta">Tabla Periódica para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch.</p>
+
+<div class="card">
+<h2 id="es-contacto">Escríbenos</h2>
+<p>¿Una duda, un error o un dato que no cuadra? Escríbenos a <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a>.</p>
+<p>Desde la app es más cómodo: <span class="path">Más › Soporte › Envía un comentario o error</span>. El mensaje lleva ya la versión de la app y el modelo de tu dispositivo, que nos ayudan a reproducir el problema.</p>
+</div>
+
+<h2 id="es-preguntas">Preguntas frecuentes</h2>
+
+<h3 id="es-restaurar">¿Cómo restauro mis compras?</h3>
+<p>En <span class="path">Más › Soporte › Restaurar compras</span>; también está al pie de la página de planes. Usa la misma cuenta de Apple con la que compraste: Pro vale en todos tus dispositivos con esa cuenta (iPhone, iPad y Mac), pero hay que restaurar en cada uno.</p>
+<p>Si la app dice que no encuentra ninguna compra, comprueba que tienes conexión, que la cuenta del App Store es la correcta y, si era una suscripción, que sigue activa en <span class="path">Ajustes › [tu nombre] › Suscripciones</span>.</p>
+
+<h3 id="es-suscripcion">¿Cómo gestiono o cancelo la suscripción?</h3>
+<p>Si tienes una suscripción activa, en <span class="path">Más › Gestionar suscripción</span>. También en <span class="path">Ajustes › [tu nombre] › Suscripciones</span> en el iPhone o el iPad, y en el Mac desde tu cuenta en la App Store. Cancela al menos 24 horas antes de la renovación para que no se cobre el periodo siguiente. Los reembolsos los decide Apple y se piden en <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+<h3 id="es-pro">¿Qué es Pro y qué es gratis?</h3>
+<p>Pro es opcional. Todo lo demás es gratis y sin anuncios:</p>
+<ul>
+<li>la tabla y la ficha de cada elemento con sus datos básicos, la búsqueda, los favoritos y las notas;</li>
+<li>25 listas de propiedades, la comparación de elementos y las tendencias;</li>
+<li>4 tablas de consulta: solubilidad, electronegatividad, configuración electrónica y espectros de emisión;</li>
+<li>el glosario y las reacciones;</li>
+<li>las calculadoras en su modo básico: masa molar, ajuste de ecuaciones, disoluciones (molaridad y dilución) y estadística descriptiva;</li>
+<li>la práctica de cuestionarios, sin límite;</li>
+<li>2 temas, los widgets, la app del Apple Watch y Siri.</li>
+</ul>
+<p>Pro añade herramientas y comodidad:</p>
+<ul>
+<li>14 tablas más de laboratorio y estadística (18 en total);</li>
+<li>13 listas de propiedades avanzadas (módulos elásticos, índice de refracción, velocidad del sonido, constantes críticas, puntos de Néel, de Curie y superconductor, y clasificación DOT), que se desbloquean también en la ficha, la comparación y las tendencias, y otros datos avanzados de la ficha, como el rombo NFPA 704 y la lista completa de isótopos radiactivos;</li>
+<li>el examen cronometrado, el repaso espaciado y las estadísticas de los cuestionarios;</li>
+<li>los modos avanzados de las calculadoras: estequiometría en el ajuste de ecuaciones, desglose por elemento de la masa molar, molalidad y porcentaje en masa en disoluciones, e intervalos de confianza y pruebas de valores atípicos en estadística;</li>
+<li>6 temas más.</li>
+</ul>
+<p>Hay tres formas de tener Pro, y las tres desbloquean lo mismo: suscripción mensual, suscripción anual o pago único de por vida. La app muestra los precios en tu moneda. Si un plan incluye prueba gratuita, la página de planes dice cuánto dura y cuánto se cobrará después.</p>
+
+<h3 id="es-idioma">¿Cómo cambio el idioma?</h3>
+<p>La app usa el idioma de tu dispositivo y está en 20 idiomas: español, inglés, alemán, francés, italiano, portugués (de Brasil y de Portugal), neerlandés, polaco, sueco, turco, ruso, ucraniano, hindi, indonesio, vietnamita, japonés, coreano y chino (simplificado y tradicional).</p>
+<p>Para cambiarlo solo en esta app, <span class="path">Más › Ajustes › Idioma</span> te lleva a sus ajustes en iOS, donde eliges el idioma (desde iOS 18 también se llega por <span class="path">Ajustes › Apps › Tabla Periódica</span>). Si no ves la opción, añade antes el idioma en <span class="path">Ajustes › General › Idioma y región</span>. En el Mac: <span class="path">Ajustes del Sistema › General › Idioma y región › Aplicaciones</span>.</p>
+
+<h3 id="es-unidades">¿Cómo cambio las unidades?</h3>
+<p>En <span class="path">Más › Ajustes</span>: temperatura en kelvin o grados Celsius; energía tal como se publica cada dato, en kJ/mol o en eV; y presión en MPa, bar o atm. Se aplican en las fichas, las listas, la comparación, las tendencias y los cuestionarios, y los widgets usan las mismas unidades de temperatura y energía. En el Apple Watch, la unidad de temperatura se cambia en la propia app del reloj.</p>
+
+<h3 id="es-datos">¿De dónde salen los datos?</h3>
+<p>Los datos de los elementos proceden de las fuentes públicas de referencia PubChem (NCBI, NIH) e IUPAC. Las configuraciones electrónicas de los átomos neutros (Z = 1 a 108) se han contrastado con la NIST Atomic Spectra Database, y los datos de isótopos (masas, abundancias, semividas y modos de desintegración) proceden de la Sección de Datos Nucleares del OIEA (Live Chart of Nuclides, NUBASE/AME).</p>
+<p>Un guion (---) significa que no hay una medición publicada fiable. Los elementos 119 a 124 son hipotéticos: sus datos son predicciones. Las fotografías proceden de Wikimedia Commons y de fuentes de dominio público; el autor y la licencia de cada una están en <span class="path">Más › Acerca de › Créditos de las fotos</span>, y las fuentes, en <span class="path">Más › Acerca de › Fuentes de datos</span>.</p>
+<p>Si ves un dato que te parece erróneo, escríbenos con el elemento, la propiedad y la fuente que usas.</p>
+
+<h3 id="es-sin-conexion">¿Funciona sin conexión?</h3>
+<p>Sí: todo va dentro de la app. Solo hace falta conexión para comprar o restaurar Pro y para abrir los enlaces externos, como los créditos de las fotos.</p>
+
+<h3 id="es-sincronizar">¿Mis favoritos se sincronizan entre dispositivos?</h3>
+<p>No. Los favoritos, las notas, el historial y el progreso se guardan solo en el dispositivo donde los creas, y el Apple Watch tiene sus propios favoritos. Pro, en cambio, te acompaña en todos tus dispositivos con la misma cuenta de Apple.</p>
+
+<h3 id="es-privacidad">¿Qué datos recoge la app?</h3>
+<p>Ninguno: lo que guardas se queda en tu dispositivo. Los detalles, en la <a href="../privacidad/#es">política de privacidad</a>.</p>
+
+<footer>
+<p><a href="../privacidad/#es">Política de privacidad</a> · <a href="../">Inicio</a></p>
+</footer>
+</section>
+
+<section id="en" lang="en" aria-labelledby="en-title">
+<h1 id="en-title" tabindex="-1">Support</h1>
+<p class="meta">Periodic Table (Tabla Periódica) for iPhone, iPad, Mac, Apple Vision Pro and Apple Watch.</p>
+
+<div class="card">
+<h2 id="en-contact">Contact us</h2>
+<p>A question, a bug, or a value that looks wrong? Email <a href="mailto:josueechandiasto@gmail.com">josueechandiasto@gmail.com</a>.</p>
+<p>From the app it’s easier: <span class="path">More › Support › Send a comment or bug</span>. The message already includes the app version and your device model, which help us reproduce the problem.</p>
+</div>
+
+<h2 id="en-faq">Frequently asked questions</h2>
+
+<h3 id="en-restore">How do I restore my purchases?</h3>
+<p>Go to <span class="path">More › Support › Restore purchases</span>; it is also at the bottom of the plans page. Use the same Apple Account you bought with: Pro works on all your devices with that account (iPhone, iPad and Mac), but you need to restore on each one.</p>
+<p>If the app says no purchase was found, check that you are online, that you are signed in to the right App Store account and, for a subscription, that it is still active in <span class="path">Settings › [your name] › Subscriptions</span>.</p>
+
+<h3 id="en-subscription">How do I manage or cancel my subscription?</h3>
+<p>With an active subscription, go to <span class="path">More › Manage subscription</span>. You can also use <span class="path">Settings › [your name] › Subscriptions</span> on iPhone or iPad, and your account in the App Store on Mac. Cancel at least 24 hours before renewal so the next period is not charged. Refunds are decided by Apple and requested at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+<h3 id="en-pro">What is Pro, and what is free?</h3>
+<p>Pro is optional. Everything else is free, with no ads:</p>
+<ul>
+<li>the table and each element’s page with its basic data, search, favorites and notes;</li>
+<li>25 property lists, element comparison and trends;</li>
+<li>4 reference tables: solubility, electronegativity, electron configuration and emission spectra;</li>
+<li>the glossary and reactions;</li>
+<li>the calculators in their basic mode: molar mass, equation balancing, solutions (molarity and dilution) and descriptive statistics;</li>
+<li>unlimited quiz practice;</li>
+<li>2 themes, the widgets, the Apple Watch app and Siri.</li>
+</ul>
+<p>Pro adds tools and convenience:</p>
+<ul>
+<li>14 more lab and statistics tables (18 in total);</li>
+<li>13 advanced property lists (elastic moduli, refractive index, speed of sound, critical constants, Néel, Curie and superconducting points, and DOT classification), also unlocked on element pages, comparison and trends, plus other advanced element data such as the NFPA 704 diamond and the full list of radioactive isotopes;</li>
+<li>timed exams, spaced review and quiz statistics;</li>
+<li>the calculators’ advanced modes: stoichiometry in the equation balancer, the per-element molar mass breakdown, molality and mass percent in solutions, and confidence intervals and outlier tests in statistics;</li>
+<li>6 more themes.</li>
+</ul>
+<p>There are three ways to get Pro, and all three unlock the same things: a monthly subscription, a yearly subscription or a one-time lifetime purchase. The app shows prices in your currency. If a plan includes a free trial, the plans page says how long it lasts and what you will be charged afterwards.</p>
+
+<h3 id="en-language">How do I change the language?</h3>
+<p>The app follows your device language and is available in 20 languages: Spanish, English, German, French, Italian, Portuguese (Brazil and Portugal), Dutch, Polish, Swedish, Turkish, Russian, Ukrainian, Hindi, Indonesian, Vietnamese, Japanese, Korean and Chinese (Simplified and Traditional).</p>
+<p>To change it for this app only, <span class="path">More › Settings › Language</span> takes you to its settings in iOS, where you pick the language (since iOS 18 you can also go through <span class="path">Settings › Apps › Periodic Table</span>). If the option is missing, first add the language in <span class="path">Settings › General › Language &amp; Region</span>. On Mac: <span class="path">System Settings › General › Language &amp; Region › Applications</span>.</p>
+
+<h3 id="en-units">How do I change units?</h3>
+<p>In <span class="path">More › Settings</span>: temperature in kelvin or degrees Celsius; energy as each value is published, in kJ/mol or in eV; and pressure in MPa, bar or atm. They apply to element pages, lists, comparison, trends and quizzes, and the widgets use the same temperature and energy units. On Apple Watch, change the temperature unit in the watch app itself.</p>
+
+<h3 id="en-sources">Where does the data come from?</h3>
+<p>Element data comes from the public reference sources PubChem (NCBI, NIH) and IUPAC. Ground-state electron configurations of neutral atoms (Z = 1 to 108) have been checked against the NIST Atomic Spectra Database, and isotope data (masses, abundances, half-lives and decay modes) comes from the IAEA Nuclear Data Section (Live Chart of Nuclides, NUBASE/AME).</p>
+<p>A dash (---) means there is no reliable published measurement. Elements 119 to 124 are hypothetical: their data are predictions. Photographs come from Wikimedia Commons and public-domain sources; each one’s author and license are listed in <span class="path">More › About › Photo credits</span>, and the sources in <span class="path">More › About › Data sources</span>.</p>
+<p>If a value looks wrong to you, email us the element, the property and the source you are using.</p>
+
+<h3 id="en-offline">Does it work offline?</h3>
+<p>Yes: everything is inside the app. You only need a connection to buy or restore Pro and to open external links, such as photo credits.</p>
+
+<h3 id="en-sync">Do my favorites sync between devices?</h3>
+<p>No. Favorites, notes, history and progress are stored only on the device where you create them, and Apple Watch keeps its own favorites. Pro, on the other hand, comes with you to every device that uses the same Apple Account.</p>
+
+<h3 id="en-privacy">What data does the app collect?</h3>
+<p>None: what you save stays on your device. Details are in the <a href="../privacidad/#en">privacy policy</a>.</p>
+
+<footer>
+<p><a href="../privacidad/#en">Privacy Policy</a> · <a href="../">Home</a></p>
+</footer>
+</section>
+</main>
+</div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var links = document.querySelectorAll('[data-set-lang]');
+  var titles = { es: root.getAttribute('data-title-es'), en: root.getAttribute('data-title-en') };
+  function choose(lang, focus) {
+    root.setAttribute('data-lang', lang);
+    root.lang = lang;
+    if (titles[lang]) document.title = titles[lang];
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].getAttribute('data-set-lang') === lang) links[i].setAttribute('aria-current', 'true');
+      else links[i].removeAttribute('aria-current');
+    }
+    if (focus) {
+      var h = document.getElementById(lang + '-title');
+      if (h) h.focus({ preventScroll: true });
+    }
+  }
+  function fromHash() {
+    var lang = decodeURIComponent(location.hash.slice(1)).split('-')[0];
+    return lang === 'es' || lang === 'en' ? lang : null;
+  }
+  function preferred() {
+    var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+    return String(list[0]).toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+  }
+  choose(fromHash() || preferred(), false);
+  var id = decodeURIComponent(location.hash.slice(1));
+  var target = id.indexOf('-') > 0 ? document.getElementById(id) : null;
+  if (target) target.scrollIntoView();
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (event) {
+      event.preventDefault();
+      var lang = this.getAttribute('data-set-lang');
+      if (history.replaceState) history.replaceState(null, '', '#' + lang);
+      choose(lang, true);
+      window.scrollTo(0, 0);
+    });
+  }
+  window.addEventListener('hashchange', function () {
+    var lang = fromHash();
+    if (lang) choose(lang, false);
+  });
+})();
+</script>
+</body>
+</html>
