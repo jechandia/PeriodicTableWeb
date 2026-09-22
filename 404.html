@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada · Tabla Periódica</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="/icon.png">
+<script>
+// Las direcciones antiguas vivían bajo /PeriodicTable/: se redirigen a la raíz.
+// Old addresses lived under /PeriodicTable/: redirect them to the root.
+(function () {
+  var p = location.pathname;
+  if (/^\/PeriodicTable(\/|$)/i.test(p)) {
+    location.replace((p.replace(/^\/PeriodicTable/i, '') || '/') + location.hash);
+  }
+})();
+</script>
+<style>
+:root { color-scheme: light; --bg: #f2f2f4; --title: #0f0f12; --muted: #55555b; --accent: #016c63; }
+body { margin: 0; background: var(--bg); color: var(--title); font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 36rem; margin: 0 auto; padding: 72px 16px; }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 12px; letter-spacing: -.02em; }
+p { color: var(--muted); margin: 0 0 8px; }
+a { color: var(--accent); font-weight: 600; }
+.el { display: inline-grid; place-items: center; width: 64px; height: 68px; margin-bottom: 24px; border-radius: 8px; background: #fff; border: 1px solid #e2e2e7; box-shadow: inset 0 -5px 0 #9e9ea4; font-size: 1.4rem; font-weight: 700; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<div class="el" aria-hidden="true">---</div>
+<h1>Esta página no existe.</h1>
+<p>Como un dato sin medición fiable: mejor un hueco honesto. <a href="/">Volver a Tabla Periódica</a></p>
+<p lang="en">This page doesn’t exist. <a href="/#en">Back to Periodic Table</a></p>
+</main>
+</body>
+</html>

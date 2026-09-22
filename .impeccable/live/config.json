@@ -1,5 +1,5 @@
 {
-  "files": ["index.html", "PeriodicTable/**/*.html"],
+  "files": ["index.html", "privacidad/index.html", "soporte/index.html"],
   "insertBefore": "</body>",
   "commentSyntax": "html",
   "cspChecked": true
