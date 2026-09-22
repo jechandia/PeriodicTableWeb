@@ -50,4 +50,4 @@ La misma que la app: científica, elegante, personal. El dato es el protagonista
 
 ## Accessibility & Inclusion
 
-WCAG 2.1 AA: contraste suficiente en todo el texto, navegación completa con teclado, textos alternativos en las capturas, compatibilidad con lectores de pantalla y alternativa para quien prefiere movimiento reducido. Contenido completo en español e inglés.
+WCAG 2.1 AA: contraste suficiente en todo el texto, navegación completa con teclado, textos alternativos en las capturas, compatibilidad con lectores de pantalla y alternativa para quien prefiere movimiento reducido. La landing está solo en inglés; privacidad y soporte, en español e inglés.

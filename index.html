@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="es" data-title-es="Tabla Periódica · Datos en los que puedes confiar" data-title-en="Periodic Table · Data you can trust">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tabla Periódica · Datos en los que puedes confiar</title>
-<meta name="description" content="Tabla Periódica: la tabla periódica con datos de PubChem, IUPAC, NIST y el OIEA para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch. Gratis, sin anuncios y sin recoger datos. Periodic Table: the periodic table with data you can trust.">
+<title>Periodic Table · Data you can trust</title>
+<meta name="description" content="Periodic Table: the periodic table with data checked against PubChem, IUPAC, NIST and the IAEA, plus lab calculators, 18 reference tables and quizzes. For iPhone, iPad, Mac and Apple Watch. Free, no ads, no data collection.">
 <meta name="color-scheme" content="light">
+<link rel="canonical" href="https://periodictable.echandia.app/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://periodictable.echandia.app/">
-<meta property="og:title" content="Tabla Periódica · Periodic Table">
-<meta property="og:description" content="La tabla periódica con datos en los que puedes confiar. The periodic table with data you can trust.">
+<meta property="og:title" content="Periodic Table">
+<meta property="og:description" content="The periodic table with data you can trust.">
 <meta property="og:image" content="https://periodictable.echandia.app/icon.png">
-<link rel="canonical" href="https://periodictable.echandia.app/">
 <link rel="icon" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
 <style>
@@ -52,9 +52,6 @@ body {
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: -9999px; top: 8px; }
 .skip:focus { left: 16px; z-index: 10; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
-.skip span + span::before { content: " · "; }
-html[data-lang="es"] .skip [lang="en"], html[data-lang="en"] .skip [lang="es"] { display: none; }
-html[data-lang="en"] .skip span + span::before { content: none; }
 
 /* header */
 .site { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
@@ -63,12 +60,6 @@ html[data-lang="en"] .skip span + span::before { content: none; }
   color: var(--title); font-weight: 600; text-decoration: none;
 }
 .brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
-.langs { display: inline-flex; gap: 2px; padding: 3px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
-.langs a {
-  display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
-  border-radius: 999px; color: var(--ink); text-decoration: none; font-size: .95rem;
-}
-.langs a[aria-current] { background: var(--title); color: var(--bg); font-weight: 600; }
 
 /* type */
 h1, h2, h3 { color: var(--title); line-height: 1.12; text-wrap: balance; margin: 0; }
@@ -83,13 +74,10 @@ a:focus-visible, button:focus-visible, .shots:focus-visible {
   outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px;
 }
 
-html[data-lang="es"] [data-section="en"], html[data-lang="en"] [data-section="es"] { display: none; }
-[data-section] + [data-section] { margin-top: var(--space); padding-top: 40px; border-top: 1px solid var(--line); }
-html[data-lang] [data-section] + [data-section] { margin-top: 0; padding-top: 0; border-top: 0; }
 
 /* hero */
 .hero { display: grid; gap: 28px; align-items: center; padding: 28px 0 0; }
-@media (min-width: 920px) { .hero { grid-template-columns: .95fr 1.05fr; gap: 56px; padding: 72px 0 8px; } }
+@media (min-width: 920px) { .hero { grid-template-columns: .8fr 1.2fr; gap: 48px; padding: 64px 0 8px; } }
 .hero h1 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); letter-spacing: -.03em; font-weight: 750; }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); margin: 18px 0 26px; max-width: 34rem; }
 .cta { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
@@ -107,10 +95,10 @@ html[data-lang] [data-section] + [data-section] { margin-top: 0; padding-top: 0;
   .store:hover { transform: translateY(-2px); }
 }
 
-/* hero: the real app on iPad and iPhone */
-.hero-shot { position: relative; margin: 0 0 0 auto; width: 100%; max-width: 560px; padding: 0 0 6% 0; }
-.hero-shot .tablet { width: 84%; }
-.hero-phone { position: absolute; right: 0; bottom: 0; width: 31%; }
+/* hero: the real app on iPad (landscape) and iPhone */
+.hero-shot { position: relative; margin: 0; width: 100%; padding: 0 0 9% 0; }
+.hero-shot .tablet { width: 90%; }
+.hero-phone { position: absolute; right: 0; bottom: 0; width: 24%; }
 
 /* sections */
 .block { margin-top: var(--space); }
@@ -134,8 +122,8 @@ html[data-lang] [data-section] + [data-section] { margin-top: 0; padding-top: 0;
 .hero-phone { padding: 5px; border-radius: 30px; }
 .hero-phone img { border-radius: 25px; }
 .tablet { padding: 12px; border-radius: 30px; background: #0c0c0f; box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(20, 20, 40, .45); }
-.tablet img { display: block; width: 100%; height: auto; aspect-ratio: 900 / 1200; border-radius: 19px; background: var(--bg); }
-.shots.tablets li { width: min(82vw, 420px); }
+.tablet img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: 19px; background: var(--bg); }
+.shots.tablets li { width: min(86vw, 640px); }
 .shots p { margin: 12px 4px 0; font-weight: 600; color: var(--title); font-size: .96rem; text-align: center; }
 
 /* features: element tiles, not cards */
@@ -239,158 +227,21 @@ footer {
 footer nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
 footer p { margin: 0; }
 .maker { display: grid; gap: 4px; }
-footer [lang] + [lang]::before { content: " · "; }
-html[data-lang="es"] footer [lang="en"], html[data-lang="en"] footer [lang="es"] { display: none; }
-html[data-lang] footer [lang] + [lang]::before { content: none; }
 @media print {
-  .skip, .langs, .arrows { display: none; }
-  html[data-lang] [data-section] { display: block; }
+  .skip, .arrows { display: none; }
 }
 
 .back { margin: 16px 0 0; color: var(--muted); max-width: 44rem; }
 </style>
 </head>
 <body>
-<a class="skip" href="#main"><span lang="es">Ir al contenido</span><span lang="en">Skip to content</span></a>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 <header class="site">
-<a class="brand" href="./"><img src="icon.png" width="32" height="32" alt="">Tabla Periódica · Periodic Table</a>
-<nav class="langs" aria-label="Idioma · Language"><a href="#es" hreflang="es" lang="es" data-set-lang="es">Español</a><a href="#en" hreflang="en" lang="en" data-set-lang="en">English</a></nav>
+<a class="brand" href="./"><img src="icon.png" width="32" height="32" alt="">Periodic Table</a>
 </header>
 
 <main id="main">
-
-<section data-section="es" lang="es" aria-labelledby="es-title">
-<div class="hero">
-<div class="hero-copy">
-<h1 id="es-title" tabindex="-1">La tabla periódica con datos en los que puedes confiar.</h1>
-<p class="lead">Los 118 elementos y las 18 tablas del apéndice de tu libro de química, con calculadoras de laboratorio y cuestionarios. Datos contrastados con PubChem, IUPAC, NIST y el OIEA. Sin anuncios, sin cuenta y sin conexión.</p>
-<div class="cta">
-<a class="store" data-store href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.51 2.69-1.28z"/></svg><span><small>Descárgala en el</small><b>App Store</b></span></a>
-<a class="ghost" href="#es-shots">Ver qué puedes hacer</a>
-</div>
-<p class="fine">Para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch · en 20 idiomas</p>
-</div>
-<figure class="hero-shot">
-<div class="tablet"><img src="capturas/es/ipad-02-tabla.jpg" width="900" height="1200" alt="La app en el iPad: la tabla periódica completa" fetchpriority="high"></div>
-<div class="phone hero-phone"><img src="capturas/es/03-ficha-cobre.jpg" width="660" height="1434" alt="La app en el iPhone: la ficha del cobre"></div>
-</figure>
-</div>
-
-<div class="block" id="es-shots">
-<div class="head-row">
-<div>
-<h2>Consulta, calcula, compara y practica.</h2>
-<p class="sub">Todo lo que necesitas para la clase de química, en el bolsillo.</p>
-</div>
-<div class="arrows"><button type="button" data-dir="-1" aria-label="Anterior">←</button><button type="button" data-dir="1" aria-label="Siguiente">→</button></div>
-</div>
-<ul class="shots" aria-label="Funciones de la app en el iPhone. Desplázate en horizontal para ver las 10." tabindex="0">
-<li><div class="phone"><img src="capturas/es/02-tabla.jpg" width="660" height="1434" alt="En la app: La tabla completa" decoding="async"></div><p>La tabla completa</p></li>
-<li><div class="phone"><img src="capturas/es/03-ficha-cobre.jpg" width="660" height="1434" alt="En la app: La ficha del cobre" decoding="async"></div><p>La ficha del cobre</p></li>
-<li><div class="phone"><img src="capturas/es/04-orbitales-hierro.jpg" width="660" height="1434" alt="En la app: Orbitales del hierro" loading="lazy" decoding="async"></div><p>Orbitales del hierro</p></li>
-<li><div class="phone"><img src="capturas/es/10-comparar.jpg" width="660" height="1434" alt="En la app: Oro frente a cobre" loading="lazy" decoding="async"></div><p>Oro frente a cobre</p></li>
-<li><div class="phone"><img src="capturas/es/05-disoluciones.jpg" width="660" height="1434" alt="En la app: Calculadora de disoluciones" loading="lazy" decoding="async"></div><p>Calculadora de disoluciones</p></li>
-<li><div class="phone"><img src="capturas/es/06-cuestionario.jpg" width="660" height="1434" alt="En la app: Cuestionarios por temas" loading="lazy" decoding="async"></div><p>Cuestionarios por temas</p></li>
-<li><div class="phone"><img src="capturas/es/07-reacciones.jpg" width="660" height="1434" alt="En la app: Reacciones químicas" loading="lazy" decoding="async"></div><p>Reacciones químicas</p></li>
-<li><div class="phone"><img src="capturas/es/08-glosario.jpg" width="660" height="1434" alt="En la app: Glosario" loading="lazy" decoding="async"></div><p>Glosario</p></li>
-<li><div class="phone"><img src="capturas/es/01-busqueda.jpg" width="660" height="1434" alt="En la app: Búsqueda al instante" loading="lazy" decoding="async"></div><p>Búsqueda al instante</p></li>
-<li><div class="phone"><img src="capturas/es/09-inicio-oscuro.jpg" width="660" height="1434" alt="En la app: Modo oscuro" loading="lazy" decoding="async"></div><p>Modo oscuro</p></li>
-</ul>
-</div>
-
-<div class="block" id="es-ipad">
-<div class="head-row">
-<div>
-<h2>Más espacio en el iPad.</h2>
-<p class="sub">La misma app, con fichas y tablas que aprovechan toda la pantalla.</p>
-</div>
-<div class="arrows"><button type="button" data-dir="-1" aria-label="Anterior">←</button><button type="button" data-dir="1" aria-label="Siguiente">→</button></div>
-</div>
-<ul class="shots tablets" aria-label="La app en el iPad. Desplázate en horizontal para ver las 4." tabindex="0">
-<li><div class="tablet"><img src="capturas/es/ipad-03-ficha-cobre.jpg" width="900" height="1200" alt="En la app: La ficha del cobre" loading="lazy" decoding="async"></div><p>La ficha del cobre</p></li>
-<li><div class="tablet"><img src="capturas/es/ipad-04-orbitales-hierro.jpg" width="900" height="1200" alt="En la app: Estructura y orbitales del hierro" loading="lazy" decoding="async"></div><p>Estructura y orbitales del hierro</p></li>
-<li><div class="tablet"><img src="capturas/es/ipad-10-comparar.jpg" width="900" height="1200" alt="En la app: Oro frente a cobre" loading="lazy" decoding="async"></div><p>Oro frente a cobre</p></li>
-<li><div class="tablet"><img src="capturas/es/ipad-07-reacciones.jpg" width="900" height="1200" alt="En la app: Reacciones químicas" loading="lazy" decoding="async"></div><p>Reacciones químicas</p></li>
-</ul>
-</div>
-
-<div class="block">
-<h2>Todo lo que necesitas para clase.</h2>
-<p class="sub">El apéndice entero del libro de química, siempre a dos toques: de la configuración electrónica a la t de Student.</p>
-<ul class="feats">
-<li><span class="el" style="--c:var(--c-nm)" aria-hidden="true"><small>16</small>S</span><div><h3>Busca como piensas</h3><p>Por nombre, símbolo, número atómico, nombre en latín o en inglés, número CAS o familia.</p></div></li>
-<li><span class="el" style="--c:var(--c-tm)" aria-hidden="true"><small>29</small>Cu</span><div><h3>La ficha de cada elemento</h3><p>Más de 70 propiedades, isótopos, espectro de emisión y fotografía real de 97 elementos. Mantén pulsado un dato para copiarlo.</p></div></li>
-<li><span class="el" style="--c:var(--c-tm)" aria-hidden="true"><small>26</small>Fe</span><div><h3>Configuración y orbitales</h3><p>Diagrama de orbitales con la regla de Hund, electrones desapareados y término fundamental. Si la configuración real se sale de Madelung, te lo dice.</p></div></li>
-<li><span class="el" style="--c:var(--c-tm)" aria-hidden="true"><small>79</small>Au</span><div><h3>Compara y descubre tendencias</h3><p>Dos o tres elementos lado a lado, 38 listas ordenables, gráfica de tendencias y mapa de calor en la tabla.</p></div></li>
-<li><span class="el" style="--c:var(--c-nm)" aria-hidden="true"><small>1</small>H</span><div><h3>Calculadoras de laboratorio</h3><p>Masa molar con teclado de fórmulas, ajuste de ecuaciones, disoluciones y estadística analítica de tus medidas, con historial.</p></div></li>
-<li><span class="el" style="--c:var(--c-pt)" aria-hidden="true"><small>82</small>Pb</span><div><h3>Cuestionarios que salen de los datos</h3><p>Siete temas y tres niveles. Cada respuesta enseña el dato que la sostiene, con un enlace a su ficha.</p></div></li>
-<li><span class="el" style="--c:var(--c-nm)" aria-hidden="true"><small>6</small>C</span><div><h3>Reacciones y glosario</h3><p>147 reacciones con sus condiciones y estados de oxidación, listas para abrir en el ajustador, y 173 términos enlazados con los datos.</p></div></li>
-<li><span class="el" style="--c:var(--c-hl)" aria-hidden="true"><small>17</small>Cl</span><div><h3>18 tablas de referencia</h3><p>Solubilidad, energías de ionización, radios covalentes, Van der Waals, constantes de Henry y valores críticos de t, F, Dixon y Grubbs.</p></div></li>
-</ul>
-</div>
-
-<div class="block trust">
-<div class="trust-copy">
-<h2>Datos en los que puedes confiar.</h2>
-<p class="sub">Cada dato está contrastado con fuentes públicas de referencia, y las fuentes están en la propia app, en Más › Fuentes de datos. Por ejemplo, la ficha del hierro:</p>
-</div>
-<figure class="specimen">
-<div class="spec-head" style="--c:var(--c-tm)">
-<span class="spec-z">26</span>
-<span class="spec-sym">Fe</span>
-<span class="spec-name">Hierro<small>Metal de transición</small></span>
-</div>
-<table>
-<caption class="vh">Hierro</caption>
-<tr><th scope="row">Masa atómica</th><td>55,845 u<span class="src">PubChem · IUPAC</span></td></tr>
-<tr><th scope="row">Configuración electrónica</th><td>[Ar] 3d⁶ 4s²<span class="src">contrastada con NIST</span></td></tr>
-<tr><th scope="row">Electronegatividad (Pauling)</th><td>1,83<span class="src">PubChem · IUPAC</span></td></tr>
-<tr><th scope="row">Isótopos estables</th><td>⁵⁴Fe ⁵⁶Fe ⁵⁷Fe ⁵⁸Fe<span class="src">OIEA · NUBASE</span></td></tr>
-</table>
-</figure>
-<div class="trust-notes">
-<p class="honest">Y cuando un dato no existe, la app no se lo inventa.</p>
-<ul class="legend"><li><span class="mark">---</span><p>Lo que no tiene una medida fiable aparece como desconocido. Mejor un hueco honesto que un número inventado.</p></li><li><span class="mark">119–124</span><p>Los elementos hipotéticos aparecen marcados: sus datos son predicciones, no mediciones.</p></li><li><span class="mark">Fe²⁺ Fe³⁺</span><p>Los estados de oxidación separan los comunes, los raros y los predichos.</p></li></ul>
-<p><a href="soporte/#es-datos">Ver todas las fuentes de datos →</a></p>
-</div>
-</div>
-
-<div class="block">
-<h2>Gratis, sin anuncios y sin recoger datos.</h2>
-<p class="sub">Lo que necesitas a diario es gratis. Pro se paga una vez y es tuyo para siempre, sin suscripción; si lo prefieres, también hay plan mensual y anual. Los tres desbloquean lo mismo en todos tus dispositivos con la misma cuenta de Apple.</p>
-<div class="plans">
-<div class="plan"><h3>Gratis</h3><p class="tag">Para estudiar a diario.</p><ul><li>La tabla, la búsqueda y la ficha con los datos básicos</li><li>4 tablas de referencia y 25 listas</li><li>Las 147 reacciones y el glosario</li><li>Práctica de cuestionarios sin límite</li><li>Las calculadoras en su modo básico</li><li>Apple Watch, widgets y tres temas</li></ul></div>
-<div class="plan pro"><h3>Pro</h3><p class="tag">Un solo pago, para siempre. O mensual o anual.</p><ul><li>Las otras 14 tablas y 13 listas</li><li>Datos avanzados: propiedades magnéticas y eléctricas, rombo NFPA 704 y todos los isótopos radiactivos</li><li>Examen cronometrado, repaso espaciado y estadísticas</li><li>Composición por elemento, reactivo limitante, molalidad y ppm, intervalo de confianza y tests de Dixon y Grubbs</li><li>El resto de temas</li></ul></div>
-</div>
-<p class="back">¿La usabas en 2019? Vuelve reconstruida desde cero, y si compraste Premium sigue siendo tuyo: se recupera al abrir la app o en Más › Restaurar compras.</p>
-<div class="privacy">
-<h3>Lo que guardas se queda en tu dispositivo.</h3>
-<ul><li>Sin cuentas ni registro</li><li>Sin anuncios ni rastreo</li><li>Sin analíticas de terceros</li><li>Apta para estudiantes de cualquier edad</li></ul>
-<p><a href="privacidad/#es">Leer la política de privacidad →</a></p>
-</div>
-</div>
-
-<div class="block devices">
-<div>
-<h2>Hecha para tus dispositivos Apple.</h2>
-<p class="sub">Una app nativa en cada pantalla, que usa las funciones del sistema que ya conoces.</p>
-<div class="watches">
-<div class="watch"><img src="capturas/es/watch-01-lista.png" width="422" height="514" alt="Apple Watch: lista de elementos" loading="lazy"></div>
-<div class="watch"><img src="capturas/es/watch-02-ficha-oro.png" width="422" height="514" alt="Apple Watch: ficha del oro" loading="lazy"></div>
-</div>
-</div>
-<dl class="devlist"><div><dt>Apple Watch</dt><dd>Los 124 elementos en la muñeca, independiente del iPhone.</dd></div><div><dt>Widgets</dt><dd>Elemento del día, también en la pantalla de bloqueo, y tus favoritos.</dd></div><div><dt>Siri, Atajos y Spotlight</dt><dd>«Masa molar en Tabla Periódica», o encuentra un elemento desde la búsqueda del sistema.</dd></div><div><dt>Tus unidades</dt><dd>Kelvin o grados Celsius, kJ/mol o eV, y MPa, bar o atm.</dd></div><div><dt>Temas con nombre de científico</dt><dd>Lavoisier, Curie y Dalton, pensado para el daltonismo, son gratis.</dd></div><div><dt>Accesible</dt><dd>VoiceOver, texto grande y modo oscuro, en 20 idiomas.</dd></div></dl>
-</div>
-
-<div class="final">
-<img src="icon.png" width="180" height="180" alt="">
-<h2>Empieza a estudiar con datos fiables.</h2>
-<p class="sub">Gratis en el App Store para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch.</p>
-<div class="cta"><a class="store" data-store href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.51 2.69-1.28z"/></svg><span><small>Descárgala en el</small><b>App Store</b></span></a></div>
-</div>
-</section>
-
 
 <section data-section="en" lang="en" aria-labelledby="en-title">
 <div class="hero">
@@ -404,7 +255,7 @@ html[data-lang] footer [lang] + [lang]::before { content: none; }
 <p class="fine">For iPhone, iPad, Mac, Apple Vision Pro and Apple Watch · in 20 languages</p>
 </div>
 <figure class="hero-shot">
-<div class="tablet"><img src="capturas/en/ipad-02-tabla.jpg" width="900" height="1200" alt="The app on iPad: the full periodic table" fetchpriority="high"></div>
+<div class="tablet"><img src="capturas/en/ipad-h-02-tabla.jpg" width="1400" height="1050" alt="The app on iPad: the full periodic table" fetchpriority="high"></div>
 <div class="phone hero-phone"><img src="capturas/en/03-ficha-cobre.jpg" width="660" height="1434" alt="The app on iPhone: the copper page"></div>
 </figure>
 </div>
@@ -435,15 +286,17 @@ html[data-lang] footer [lang] + [lang]::before { content: none; }
 <div class="head-row">
 <div>
 <h2>More room on iPad.</h2>
-<p class="sub">The same app, with pages and tables that use the whole screen.</p>
+<p class="sub">The same app in landscape, with the whole table, element pages and tools using every inch of the screen.</p>
 </div>
 <div class="arrows"><button type="button" data-dir="-1" aria-label="Previous">←</button><button type="button" data-dir="1" aria-label="Next">→</button></div>
 </div>
-<ul class="shots tablets" aria-label="The app on iPad. Scroll horizontally to see all 4." tabindex="0">
-<li><div class="tablet"><img src="capturas/en/ipad-03-ficha-cobre.jpg" width="900" height="1200" alt="In the app: The copper page" loading="lazy" decoding="async"></div><p>The copper page</p></li>
-<li><div class="tablet"><img src="capturas/en/ipad-04-orbitales-hierro.jpg" width="900" height="1200" alt="In the app: Iron structure and orbitals" loading="lazy" decoding="async"></div><p>Iron structure and orbitals</p></li>
-<li><div class="tablet"><img src="capturas/en/ipad-10-comparar.jpg" width="900" height="1200" alt="In the app: Gold versus copper" loading="lazy" decoding="async"></div><p>Gold versus copper</p></li>
-<li><div class="tablet"><img src="capturas/en/ipad-07-reacciones.jpg" width="900" height="1200" alt="In the app: Chemical reactions" loading="lazy" decoding="async"></div><p>Chemical reactions</p></li>
+<ul class="shots tablets" aria-label="The app on iPad. Scroll horizontally to see all 6." tabindex="0">
+<li><div class="tablet"><img src="capturas/en/ipad-h-03-ficha-cobre.jpg" width="1400" height="1050" alt="In the app: The copper page" loading="lazy" decoding="async"></div><p>The copper page</p></li>
+<li><div class="tablet"><img src="capturas/en/ipad-h-04-orbitales-hierro.jpg" width="1400" height="1050" alt="In the app: Iron orbitals and atomic properties" loading="lazy" decoding="async"></div><p>Iron orbitals and atomic properties</p></li>
+<li><div class="tablet"><img src="capturas/en/ipad-h-10-comparar.jpg" width="1400" height="1050" alt="In the app: Gold versus copper" loading="lazy" decoding="async"></div><p>Gold versus copper</p></li>
+<li><div class="tablet"><img src="capturas/en/ipad-h-05-disoluciones.jpg" width="1400" height="1050" alt="In the app: Solutions calculator" loading="lazy" decoding="async"></div><p>Solutions calculator</p></li>
+<li><div class="tablet"><img src="capturas/en/ipad-h-07-reacciones.jpg" width="1400" height="1050" alt="In the app: Chemical reactions" loading="lazy" decoding="async"></div><p>Chemical reactions</p></li>
+<li><div class="tablet"><img src="capturas/en/ipad-h-09-inicio-oscuro.jpg" width="1400" height="1050" alt="In the app: Home in dark mode" loading="lazy" decoding="async"></div><p>Home in dark mode</p></li>
 </ul>
 </div>
 
@@ -527,12 +380,12 @@ html[data-lang] footer [lang] + [lang]::before { content: none; }
 
 <footer>
 <div class="maker">
-<p><span lang="es">Creada por</span><span lang="en">Created by</span> Josue Echandia · <a href="mailto:josue@echandia.app">josue@echandia.app</a></p>
-<p><span lang="es">Hecha con amor en</span><span lang="en">Made with love in</span> <span role="img" aria-label="Perú">🇵🇪</span></p>
+<p>Created by Josue Echandia · <a href="mailto:josue@echandia.app">josue@echandia.app</a></p>
+<p>Made with love in <span role="img" aria-label="Peru">🇵🇪</span></p>
 </div>
 <nav aria-label="Legal">
-<a href="privacidad/"><span lang="es">Privacidad</span><span lang="en">Privacy</span></a>
-<a href="soporte/"><span lang="es">Soporte</span><span lang="en">Support</span></a>
+<a href="privacidad/#en">Privacy</a>
+<a href="soporte/#en">Support</a>
 </nav>
 </footer>
 </div>
@@ -558,51 +411,6 @@ var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-moti
       list.scrollBy({ left: step * 2 * Number(this.getAttribute('data-dir')), behavior: reduceMotion ? 'auto' : 'smooth' });
     });
   }
-})();
-
-// Language switcher. Sections have no id="es"/"en", so #es and #en never scroll the header away.
-(function () {
-  var root = document.documentElement;
-  var links = document.querySelectorAll('[data-set-lang]');
-  var titles = { es: root.getAttribute('data-title-es'), en: root.getAttribute('data-title-en') };
-  function choose(lang, focus) {
-    root.setAttribute('data-lang', lang);
-    root.lang = lang;
-    if (titles[lang]) document.title = titles[lang];
-    for (var i = 0; i < links.length; i++) {
-      if (links[i].getAttribute('data-set-lang') === lang) links[i].setAttribute('aria-current', 'true');
-      else links[i].removeAttribute('aria-current');
-    }
-    if (focus) {
-      var h = document.getElementById(lang + '-title');
-      if (h) h.focus({ preventScroll: true });
-    }
-  }
-  function fromHash() {
-    var lang = decodeURIComponent(location.hash.slice(1)).split('-')[0];
-    return lang === 'es' || lang === 'en' ? lang : null;
-  }
-  function preferred() {
-    var list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
-    return String(list[0]).toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
-  }
-  choose(fromHash() || preferred(), false);
-  var id = decodeURIComponent(location.hash.slice(1));
-  var target = id.indexOf('-') > 0 ? document.getElementById(id) : null;
-  if (target) target.scrollIntoView();
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function (event) {
-      event.preventDefault();
-      var lang = this.getAttribute('data-set-lang');
-      if (history.replaceState) history.replaceState(null, '', '#' + lang);
-      choose(lang, true);
-      window.scrollTo(0, 0);
-    });
-  }
-  window.addEventListener('hashchange', function () {
-    var lang = fromHash();
-    if (lang) choose(lang, false);
-  });
 })();
 </script>
 </body>
