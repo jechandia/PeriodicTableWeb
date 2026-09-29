@@ -14,7 +14,7 @@ El usuario principal es el estudiante universitario de química, igual que en la
 
 ## Product Purpose
 
-El sitio promociona Tabla Periódica, una app de referencia química para iPhone, iPad, Mac, Apple Vision Pro y Apple Watch. La página principal existe para convencer a un estudiante de que la descargue; las páginas de privacidad y soporte son secundarias y responden a quien ya la usa o la está evaluando. El éxito es una descarga desde el App Store.
+El sitio promociona Tabla Periódica, una app de referencia química para iPhone, iPad, Mac y Apple Watch. La página principal existe para convencer a un estudiante de que la descargue; las páginas de privacidad y soporte son secundarias y responden a quien ya la usa o la está evaluando. El éxito es una descarga desde el App Store.
 
 ## Positioning
 
