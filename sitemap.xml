@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://periodictable.echandia.app/</loc><lastmod>2026-10-13</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://periodictable.echandia.app/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/"/>
+  </url>
+  <url>
+    <loc>https://periodictable.echandia.app/es/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/"/>
+  </url>
   <url><loc>https://periodictable.echandia.app/soporte/</loc><lastmod>2026-10-13</lastmod></url>
-  <url><loc>https://periodictable.echandia.app/privacidad/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://periodictable.echandia.app/privacidad/</loc><lastmod>2026-10-13</lastmod></url>
 </urlset>
