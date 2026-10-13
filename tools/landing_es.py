@@ -124,6 +124,8 @@ T = [
     ('22 reference tables', '22 tablas de consulta'),
     ('Solubility, reduction potentials, acids and bases, Ksp, thermodynamic data, ionization energies and critical values of t, F, Q and Grubbs.',
      'Solubilidad, potenciales de reducción, ácidos y bases, Ksp, datos termodinámicos, energías de ionización y valores críticos de t, F, Q y Grubbs.'),
+    ('<p class="calc-links">Step by step: <a href="molar-mass-calculator/">Molar mass calculator</a> · <a href="ph-calculator/">pH calculator</a> · <a href="balance-chemical-equations/">Chemical equation balancer</a></p>',
+     '<p class="calc-links">Paso a paso: <a href="calculadora-masa-molar/">Calculadora de masa molar</a> · <a href="calculadora-ph/">Calculadora de pH</a> · <a href="ajustar-ecuaciones/">Ajustar ecuaciones químicas</a></p>'),
     # confianza
     ('<h2>Data you can trust.</h2>', '<h2>Datos en los que puedes confiar.</h2>'),
     ('Every value is checked against public reference sources, and the sources are listed in the app itself, under More › Data sources. Take the iron page, for example:',

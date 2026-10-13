@@ -12,6 +12,42 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/"/>
   </url>
+  <url>
+    <loc>https://periodictable.echandia.app/molar-mass-calculator/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/molar-mass-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/calculadora-masa-molar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/molar-mass-calculator/"/>
+  </url>
+  <url>
+    <loc>https://periodictable.echandia.app/es/calculadora-masa-molar/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/molar-mass-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/calculadora-masa-molar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/molar-mass-calculator/"/>
+  </url>
+  <url>
+    <loc>https://periodictable.echandia.app/ph-calculator/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/ph-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/calculadora-ph/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/ph-calculator/"/>
+  </url>
+  <url>
+    <loc>https://periodictable.echandia.app/es/calculadora-ph/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/ph-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/calculadora-ph/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/ph-calculator/"/>
+  </url>
+  <url>
+    <loc>https://periodictable.echandia.app/balance-chemical-equations/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/balance-chemical-equations/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/ajustar-ecuaciones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/balance-chemical-equations/"/>
+  </url>
+  <url>
+    <loc>https://periodictable.echandia.app/es/ajustar-ecuaciones/</loc><lastmod>2026-10-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/balance-chemical-equations/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/ajustar-ecuaciones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/balance-chemical-equations/"/>
+  </url>
   <url><loc>https://periodictable.echandia.app/soporte/</loc><lastmod>2026-10-13</lastmod></url>
   <url><loc>https://periodictable.echandia.app/privacidad/</loc><lastmod>2026-10-13</lastmod></url>
 </urlset>

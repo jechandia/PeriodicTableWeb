@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de masa molar: de fórmula a g/mol | Tabla Periódica</title>
+<meta name="description" content="Calcula la masa molar de cualquier fórmula química en g/mol, con el porcentaje en masa de cada elemento. Con paréntesis, hidratos e iones. App gratis para iPhone, iPad y Mac.">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://periodictable.echandia.app/es/calculadora-masa-molar/">
+<link rel="alternate" hreflang="en" href="https://periodictable.echandia.app/molar-mass-calculator/">
+<link rel="alternate" hreflang="es" href="https://periodictable.echandia.app/es/calculadora-masa-molar/">
+<link rel="alternate" hreflang="x-default" href="https://periodictable.echandia.app/molar-mass-calculator/">
+<meta name="apple-itunes-app" content="app-id=1455103430">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://periodictable.echandia.app/es/calculadora-masa-molar/">
+<meta property="og:title" content="Calculadora de masa molar: de fórmula a g/mol | Tabla Periódica">
+<meta property="og:description" content="Calcula la masa molar de cualquier fórmula química en g/mol, con el porcentaje en masa de cada elemento. Con paréntesis, hidratos e iones. App gratis para iPhone, iPad y Mac.">
+<meta property="og:image" content="https://periodictable.echandia.app/og-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../icon.png">
+<link rel="apple-touch-icon" href="../../icon.png">
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Tabla Periódica",
+    "item": "https://periodictable.echandia.app/es/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Calculadora de masa molar",
+    "item": "https://periodictable.echandia.app/es/calculadora-masa-molar/"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "¿Qué es la masa molar?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "La masa de un mol de una sustancia, en gramos por mol (g/mol). Tiene el mismo número que la masa fórmula relativa: el agua, H₂O, tiene 18.015 g/mol."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "¿La calculadora de masa molar es gratis?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Sí. La masa molar y la composición por elemento son gratis en la app, sin anuncios y sin cuenta."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "¿Funciona con hidratos e iones complejos?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Sí: escribe CuSO4·5H2O, K4[Fe(CN)6] o SO4^2- y la app lee el coeficiente, los corchetes y la carga."
+    }
+   }
+  ]
+ }
+]
+</script>
+<style>
+/*
+  Visual language: "la vitrina de elementos" from the app's DESIGN.md.
+  Real screenshots of the app, element cells on white with their family
+  color as a bottom bar, and the Lavoisier teal accent. Light theme only. One solid accent from the app icon for links and focus.
+  System font on purpose: it is the app's own voice on Apple devices and
+  keeps the page free of third-party requests.
+*/
+:root {
+  color-scheme: light;
+  /* Tokens from the app's DESIGN.md (light surface, Lavoisier theme) */
+  --bg: #f2f2f4;
+  --surface: #ffffff;
+  --ink: #1c1c21;
+  --title: #0f0f12;
+  --muted: #55555b;
+  --line: #e2e2e7;
+  --accent: #016c63;
+  --on-accent: #ffffff;
+  --c-am: #f85f5a; --c-ae: #b15807; --c-tm: #326cde; --c-pt: #0cc6b7;
+  --c-md: #c29c2a; --c-nm: #40aa11; --c-hl: #9f55bd; --c-ng: #4aaff3;
+  --c-ln: #dc64a7; --c-ac: #a47efd;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --space: clamp(72px, 11vw, 136px);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.wrap { max-width: 70rem; margin: 0 auto; padding: 16px 16px 40px; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 10; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
+
+/* header */
+.site { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  color: var(--title); font-weight: 600; text-decoration: none;
+}
+.langlink {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: .95rem;
+}
+.langlink:hover { color: var(--title); }
+.brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
+
+/* type */
+h1, h2, h3 { color: var(--title); line-height: 1.12; text-wrap: balance; margin: 0; }
+h1:focus { outline: none; }
+h2 { font-size: clamp(1.85rem, 4.2vw, 2.75rem); letter-spacing: -.025em; font-weight: 700; }
+h3 { font-size: 1.1rem; letter-spacing: -.01em; }
+p { text-wrap: pretty; }
+.sub { color: var(--muted); font-size: 1.1rem; max-width: 38rem; margin: 14px 0 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a[href^="mailto:"] { overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible, .shots:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px;
+}
+
+
+/* hero */
+.hero { display: grid; gap: 28px; align-items: center; padding: 28px 0 0; }
+@media (min-width: 920px) { .hero { grid-template-columns: .8fr 1.2fr; gap: 48px; padding: 64px 0 8px; } }
+.hero h1 { font-size: clamp(2.1rem, 4.4vw, 3.3rem); letter-spacing: -.03em; font-weight: 750; }
+.lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); color: var(--muted); margin: 18px 0 26px; max-width: 34rem; }
+.cta { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
+.store {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 8px 22px 8px 18px;
+  background: var(--title); color: var(--bg); border-radius: 14px; text-decoration: none; line-height: 1.15;
+  transition: transform .3s var(--ease);
+}
+.store svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
+.store small { display: block; font-size: .72rem; opacity: .85; }
+.store b { display: block; font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; }
+.ghost { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+.fine { color: var(--muted); font-size: .92rem; margin: 18px 0 0; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .store:hover { transform: translateY(-2px); }
+}
+
+/* hero: the real app on iPad (landscape) and iPhone */
+.hero-shot { position: relative; margin: 0; width: 100%; padding: 0 0 9% 0; }
+.hero-shot .tablet { width: 90%; }
+.hero-phone { position: absolute; right: 0; bottom: 0; width: 24%; }
+
+/* sections */
+.block { margin-top: var(--space); }
+.head-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; }
+
+/* screenshots */
+.arrows { display: none; gap: 8px; }
+@media (min-width: 760px) { .arrows { display: flex; } }
+.arrows button {
+  width: 46px; height: 46px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--title); font-size: 1.15rem; cursor: pointer;
+}
+.shots {
+  display: flex; gap: 20px; margin: 28px -16px 0; padding: 6px 16px 18px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px;
+  list-style: none; scrollbar-width: thin; overscroll-behavior-x: contain;
+}
+.shots li { flex: none; width: min(64vw, 250px); scroll-snap-align: start; margin: 0; }
+.phone { padding: 7px; border-radius: 40px; background: #0c0c0f; box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(20, 20, 40, .45); }
+.phone img { display: block; width: 100%; height: auto; aspect-ratio: 660 / 1434; border-radius: 33px; background: var(--bg); }
+.hero-phone { padding: 5px; border-radius: 30px; }
+.hero-phone img { border-radius: 25px; }
+.tablet { padding: 12px; border-radius: 30px; background: #0c0c0f; box-shadow: 0 0 0 1px var(--line), 0 18px 40px -24px rgba(20, 20, 40, .45); }
+.tablet img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: 19px; background: var(--bg); }
+.shots.tablets li { width: min(86vw, 640px); }
+.shots p { margin: 12px 4px 0; font-weight: 600; color: var(--title); font-size: .96rem; text-align: center; }
+
+/* features: element tiles, not cards */
+.feats {
+  display: grid; gap: 0 48px; margin: 36px 0 0; padding: 0; list-style: none;
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 760px) { .feats { grid-template-columns: 1fr 1fr; } }
+.feats li { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.feats p { margin: 6px 0 0; color: var(--muted); }
+.el {
+  flex: none; position: relative; width: 64px; height: 68px; border-radius: 8px;
+  background: var(--surface); color: var(--title); border: 1px solid var(--line);
+  box-shadow: inset 0 -5px 0 var(--c);
+  display: grid; place-items: center; padding-bottom: 4px;
+  font-size: 1.55rem; font-weight: 700; letter-spacing: -.02em;
+}
+.el small { position: absolute; top: 5px; left: 7px; font-size: .68rem; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+
+.calc-links { margin: 22px 0 0; color: var(--muted); }
+.calc-links a { font-weight: 600; }
+/* trust */
+.trust { display: grid; gap: 28px; }
+@media (min-width: 920px) {
+  .trust { grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; grid-template-areas: "copy card" "notes card"; gap: 0 64px; align-items: start; }
+  .trust-copy { grid-area: copy; } .trust-notes { grid-area: notes; } .specimen { grid-area: card; align-self: center; }
+}
+.honest { margin: 0; color: var(--title); font-weight: 650; font-size: 1.1rem; }
+@media (min-width: 920px) { .honest { margin-top: 28px; } }
+.legend { margin: 18px 0 20px; padding: 0; list-style: none; display: grid; gap: 14px; }
+.legend li { display: flex; gap: 16px; align-items: baseline; }
+.legend p { margin: 0; color: var(--muted); }
+.mark {
+  flex: none; min-width: 5.2em; padding: 4px 8px; border-radius: 6px; text-align: center;
+  background: var(--surface); border: 1px solid var(--line); color: var(--title);
+  font-weight: 700; font-size: .92rem;
+}
+.specimen { margin: 0; border-radius: 20px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.spec-head {
+  display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; gap: 0 20px;
+  padding: 22px 24px 26px; background: var(--surface); color: var(--title);
+  box-shadow: inset 0 -6px 0 var(--c);
+}
+.spec-z { font-size: .95rem; font-weight: 600; color: var(--muted); grid-column: 1; }
+.spec-sym { font-size: clamp(3.4rem, 9vw, 4.6rem); font-weight: 750; line-height: .95; letter-spacing: -.03em; grid-column: 1; }
+.spec-name { grid-column: 2; grid-row: 1 / span 2; align-self: end; font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+.spec-name small { display: block; font-size: .95rem; font-weight: 500; color: var(--muted); }
+.specimen table { width: 100%; border-collapse: collapse; font-size: .98rem; }
+.specimen th, .specimen td { padding: 14px 24px; text-align: left; vertical-align: top; border-top: 1px solid var(--line); }
+.specimen th { font-weight: 500; color: var(--muted); width: 46%; }
+.specimen td { color: var(--title); font-weight: 650; }
+.specimen .src { display: block; margin-top: 2px; font-weight: 500; color: var(--accent); font-size: .84rem; }
+@media (max-width: 480px) { .specimen th, .specimen td { padding: 12px 18px; } .specimen th { width: 44%; } }
+
+/* plans + privacy */
+.plans { display: grid; gap: 16px; margin-top: 36px; }
+@media (min-width: 760px) { .plans { grid-template-columns: 1fr 1fr; } }
+.plan { padding: 26px 28px; border-radius: 20px; background: var(--surface); border: 1px solid var(--line); }
+.plan.pro { border: 2px solid var(--accent); }
+.plan h3 { font-size: 1.45rem; }
+.plan .tag { color: var(--muted); margin: 4px 0 16px; }
+.plan ul, .privacy ul { margin: 0; padding: 0; list-style: none; }
+.plan li, .privacy li { position: relative; padding-left: 28px; margin: .55em 0; }
+.plan li::before, .privacy li::before {
+  content: ""; position: absolute; left: 3px; top: .5em; width: 13px; height: 7px;
+  border-left: 2.5px solid var(--accent); border-bottom: 2.5px solid var(--accent); transform: rotate(-45deg);
+}
+.privacy {
+  display: grid; gap: 12px 40px; margin-top: 16px; padding: 26px 28px; border-radius: 20px;
+  background: var(--surface); border: 1px solid var(--line); color: var(--ink);
+}
+@media (min-width: 760px) { .privacy { grid-template-columns: 1fr 1.4fr; align-items: center; } }
+.privacy h3 { font-size: 1.35rem; }
+.privacy ul { display: grid; gap: 0 24px; }
+@media (min-width: 560px) { .privacy ul { grid-template-columns: 1fr 1fr; } }
+.privacy p { margin: 0; grid-column: 1 / -1; }
+.privacy a { font-weight: 600; }
+
+/* devices */
+.devices { display: grid; gap: 40px; }
+@media (min-width: 920px) { .devices { grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; } }
+.watches { display: flex; gap: 14px; margin-top: 28px; }
+.watch { width: 50%; max-width: 150px; padding: 7px; border-radius: 30% / 25%; background: #0c0c0f; box-shadow: 0 0 0 1px var(--line); }
+.watch img { display: block; width: 100%; height: auto; aspect-ratio: 422 / 514; border-radius: 26% / 21%; }
+.devlist { margin: 0; display: grid; gap: 0 36px; border-top: 1px solid var(--line); }
+@media (min-width: 560px) { .devlist { grid-template-columns: 1fr 1fr; } }
+.devlist div { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.devlist dt { font-weight: 700; color: var(--title); }
+.devlist dd { margin: 4px 0 0; color: var(--muted); }
+
+/* final */
+.final { margin-top: var(--space); text-align: center; }
+.final img { width: 88px; height: 88px; border-radius: 22px; border: 1px solid var(--line); }
+.final h2 { margin-top: 20px; }
+.final .sub { margin: 12px auto 26px; }
+.final .cta { justify-content: center; }
+
+footer {
+  margin-top: var(--space); padding-top: 18px; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .9rem;
+  display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between;
+}
+footer nav { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+footer p { margin: 0; }
+.maker { display: grid; gap: 4px; }
+@media print {
+  .skip, .arrows { display: none; }
+}
+
+.back { margin: 16px 0 0; color: var(--muted); max-width: 44rem; }
+
+/* calculator pages */
+.crumbs { margin: 28px 0 0; font-size: .92rem; color: var(--muted); }
+.crumbs a { color: var(--muted); }
+.calc-hero { display: grid; gap: 32px; align-items: center; padding: 20px 0 0; }
+@media (min-width: 860px) { .calc-hero { grid-template-columns: 1.15fr .85fr; gap: 56px; padding-top: 40px; } }
+.calc-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); letter-spacing: -.03em; font-weight: 750; }
+.calc-hero .phone { max-width: 300px; margin: 0 auto; }
+.prose { max-width: 44rem; }
+.prose p, .prose li { color: var(--ink); }
+.prose h3 { margin-top: 28px; }
+.steps { padding-left: 1.3em; }
+.steps li { margin: .5em 0; }
+.worked { width: 100%; max-width: 44rem; border-collapse: collapse; margin: 18px 0 8px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 14px; overflow: hidden; font-variant-numeric: tabular-nums; }
+.worked th, .worked td { padding: 12px 16px; text-align: left; border-top: 1px solid var(--line); }
+.worked thead th { border-top: 0; color: var(--muted); font-weight: 500; font-size: .92rem; }
+.worked tfoot td { font-weight: 700; color: var(--title); }
+.worked td.n { text-align: right; white-space: nowrap; }
+.worked th.n { text-align: right; }
+.table-wrap { max-width: 44rem; overflow-x: auto; }
+@media (max-width: 560px) { .worked th, .worked td { padding: 10px 6px; font-size: .86rem; } .worked th:first-child, .worked td:first-child { padding-left: 12px; } }
+.note { color: var(--muted); font-size: .96rem; }
+.wide-shot { margin-top: 28px; max-width: 900px; }
+.related { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; }
+.related a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+<div class="wrap">
+<header class="site">
+<a class="brand" href="https://periodictable.echandia.app/es/"><img src="../../icon.png" width="32" height="32" alt="">Tabla Periódica</a>
+<a class="langlink" href="https://periodictable.echandia.app/molar-mass-calculator/" hreflang="en" lang="en">English</a>
+</header>
+<nav class="crumbs" aria-label="Ruta"><a href="https://periodictable.echandia.app/es/">Tabla Periódica</a> › <span aria-current="page">Calculadora de masa molar</span></nav>
+<main id="main">
+<div class="calc-hero">
+<div>
+<h1>Calculadora de masa molar</h1>
+<p class="lead">Escribe una fórmula química y obtén su masa molar en g/mol, con la parte de cada elemento. Con paréntesis, hidratos e iones. Gratis en Tabla Periódica y Química para iPhone, iPad y Mac.</p>
+<div class="cta"><a class="store" href="https://apps.apple.com/app/id1455103430"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.51 2.69-1.28z"/></svg><span><small>Descárgala en el</small><b>App Store</b></span></a></div>
+</div>
+<div class="phone"><img src="../../capturas/es/14-masa-molar.jpg" width="660" height="1434" alt="Masa molar del H2SO4 en la app: 98.072 g/mol con el porcentaje en masa de cada elemento" fetchpriority="high"></div>
+</div>
+
+<div class="block prose">
+<h2>Cómo se calcula la masa molar</h2>
+<ol class="steps"><li>Cuenta los átomos de cada elemento de la fórmula. Un subíndice después de un paréntesis multiplica todo lo de dentro: Ca(OH)₂ tiene 2 O y 2 H.</li><li>Multiplica cada cantidad por el peso atómico estándar del elemento (en g/mol).</li><li>Suma los productos. El total es la masa molar: la masa en gramos de un mol de la sustancia.</li></ol>
+<h3>Ejemplo resuelto: ácido sulfúrico, H₂SO₄</h3>
+<div class="table-wrap"><table class="worked"><thead><tr><th>Elemento</th><th class="n">Átomos × peso atómico</th><th class="n">g/mol</th><th class="n">% en masa</th></tr></thead><tbody><tr><td>H</td><td class="n">2 × 1.008</td><td class="n">2.016</td><td class="n">2.06 %</td></tr><tr><td>S</td><td class="n">1 × 32.06</td><td class="n">32.06</td><td class="n">32.69 %</td></tr><tr><td>O</td><td class="n">4 × 15.999</td><td class="n">63.996</td><td class="n">65.25 %</td></tr></tbody><tfoot><tr><td colspan="2">Masa molar del H₂SO₄</td><td class="n">98.072 g/mol</td><td></td></tr></tfoot></table></div>
+<p class="note">El porcentaje en masa de cada elemento es su aporte dividido entre la masa molar: 63.996 / 98.072 = 65.25 % de oxígeno.</p>
+</div>
+
+<div class="block">
+<h2>Lo que hace la app por ti</h2>
+<ul class="prose"><li>Un teclado de química con los símbolos y los subíndices: H2SO4 se convierte en H₂SO₄ mientras escribes.</li><li>Paréntesis y corchetes, como Ca(OH)₂ o K₄[Fe(CN)₆], hidratos como CuSO₄·5H₂O e iones como SO₄²⁻.</li><li>Distingue Co (cobalto) de CO (monóxido de carbono) y te ofrece la otra lectura cuando la fórmula es ambigua.</li><li>La composición por elemento, con el aporte de cada átomo y su porcentaje en masa, y el historial de tus cálculos.</li><li>Pesos atómicos contrastados con la IUPAC y PubChem. Pídeselo a Siri: «Masa molar en Tabla Periódica».</li></ul>
+
+</div>
+
+<div class="block">
+<h2>Preguntas.</h2>
+<dl class="devlist faq"><div><dt>¿Qué es la masa molar?</dt><dd>La masa de un mol de una sustancia, en gramos por mol (g/mol). Tiene el mismo número que la masa fórmula relativa: el agua, H₂O, tiene 18.015 g/mol.</dd></div><div><dt>¿La calculadora de masa molar es gratis?</dt><dd>Sí. La masa molar y la composición por elemento son gratis en la app, sin anuncios y sin cuenta.</dd></div><div><dt>¿Funciona con hidratos e iones complejos?</dt><dd>Sí: escribe CuSO4·5H2O, K4[Fe(CN)6] o SO4^2- y la app lee el coeficiente, los corchetes y la carga.</dd></div></dl>
+</div>
+
+<div class="block">
+<h2>Más calculadoras de química.</h2>
+<ul class="related"><li><a href="https://periodictable.echandia.app/es/calculadora-ph/">Calculadora de pH</a></li><li><a href="https://periodictable.echandia.app/es/ajustar-ecuaciones/">Ajustar ecuaciones químicas</a></li><li><a href="https://periodictable.echandia.app/es/">Ver todo lo que hace la app →</a></li></ul>
+</div>
+
+<div class="final">
+<img src="../../icon.png" width="180" height="180" alt="">
+<h2>Pruébala en tu iPhone.</h2>
+<p class="sub">Gratis en el App Store para iPhone, iPad, Mac y Apple Watch.</p>
+<div class="cta"><a class="store" href="https://apps.apple.com/app/id1455103430"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.77-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.39-.92-2.41-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.06-.51 2.69-1.28z"/></svg><span><small>Descárgala en el</small><b>App Store</b></span></a></div>
+</div>
+</main>
+
+<footer>
+<div class="maker">
+<p>Creada por Josue Echandia · <a href="mailto:josue@echandia.app">josue@echandia.app</a></p>
+<p>Hecha con <span role="img" aria-label="amor">&#x2665;&#xFE0E;</span> en Perú <span aria-hidden="true">🇵🇪</span></p>
+</div>
+<nav aria-label="Legal">
+<a href="https://periodictable.echandia.app/privacidad/#es">Privacidad</a>
+<a href="https://periodictable.echandia.app/soporte/#es">Soporte</a>
+</nav>
+</footer>
+</div>
+</body>
+</html>
