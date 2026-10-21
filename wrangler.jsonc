@@ -11,7 +11,7 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   }
-  // Cuando echandia.app esté en Cloudflare, descomentar para servir el dominio propio.
-  // Once echandia.app is on Cloudflare, uncomment to serve the custom domain.
-  // ,"routes": [{ "pattern": "periodictable.echandia.app", "custom_domain": true }]
+  // Dominio propio (la zona echandia.app está en Cloudflare).
+  // Custom domain (the echandia.app zone is on Cloudflare).
+  ,"routes": [{ "pattern": "periodictable.echandia.app", "custom_domain": true }]
 }
