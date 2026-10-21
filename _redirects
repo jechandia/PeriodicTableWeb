@@ -1,0 +1,4 @@
+# Las direcciones antiguas vivían bajo /PeriodicTable/.
+# Old addresses lived under /PeriodicTable/.
+/PeriodicTable    /         301
+/PeriodicTable/*  /:splat   301

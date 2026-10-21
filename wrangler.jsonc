@@ -1,0 +1,17 @@
+// Despliegue en Cloudflare Workers (solo archivos estáticos, sin código de servidor).
+// Deploy on Cloudflare Workers (static assets only, no server code).
+//   npx wrangler deploy
+{
+  "name": "periodictable",
+  "compatibility_date": "2026-05-01",
+  "assets": {
+    // Se publica la raíz del repo; lo que no es web se excluye en .assetsignore.
+    // The repo root is published; non-web files are excluded in .assetsignore.
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+  // Cuando echandia.app esté en Cloudflare, descomentar para servir el dominio propio.
+  // Once echandia.app is on Cloudflare, uncomment to serve the custom domain.
+  // ,"routes": [{ "pattern": "periodictable.echandia.app", "custom_domain": true }]
+}
