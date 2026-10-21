@@ -1,0 +1,15 @@
+# Archivos del repo que no se publican en Cloudflare.
+# Repo files that are not published to Cloudflare.
+.git
+.gitignore
+.assetsignore
+.claude
+.impeccable
+.wrangler
+.DS_Store
+.nojekyll
+node_modules
+wrangler.jsonc
+CNAME
+PRODUCT.md
+tools
